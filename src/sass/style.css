@@ -23,6 +23,7 @@
 	body
 */
 body {
+  min-height: 100vh;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -77,20 +78,12 @@ body {
   	tag-img: definimos un ancho automatico y una alta, finalmente 
   	con object-fit ajustamos la img a su contenedor 
   */
-  /*
-  	tag-h1
-  */
 }
 .header_component .header_container .header_box_logo a img {
   width: auto;
   height: 70px;
   -o-object-fit: cover;
      object-fit: cover;
-}
-.header_component .header_container .header_box_logo a h1 {
-  color: #5c5b5b;
-  font-size: 1.6rem;
-  margin-left: 12px;
 }
 .header_component .header_container .header_box_menu_icon {
   cursor: pointer;
@@ -110,9 +103,18 @@ body {
   	seleccionamos el segundo elemento tag-span y generamos
   	un margen en el eje-Y
   */
+  /*
+  	dispositivos mayores a 720px: definimos display: none 
+  	para ocultar el icono de menu de la vista
+  */
 }
 .header_component .header_container .header_box_menu_icon span:nth-child(2) {
   margin: 4px 0;
+}
+@media (min-width: 720px) {
+  .header_component .header_container .header_box_menu_icon span {
+    display: none;
+  }
 }
 
 /*  
@@ -176,7 +178,9 @@ body {
 }
 @media (max-width: 719px) {
   .components_container .nav_component {
+    background-color: #fff;
     transform: translateX(-1000px);
+    transition: transform 0.3s;
     /*
     	js_show_navbar: clase añadida con javascript en "./src/js/main.js"
     	definimos transform: translateX(0px) para retornanr el menu de 
@@ -185,8 +189,6 @@ body {
   }
   .components_container .nav_component.js_show_navbar {
     transform: translateX(0px);
-    transition: transform 0.3s;
-    background-color: #fff;
   }
 }
 .components_container .nav_component .nav_menu {
@@ -328,9 +330,6 @@ body {
   	description_component
   */
   /*
-  	footer_component  
-  */
-  /*
   	section_banner  
   */
   /*
@@ -371,48 +370,44 @@ body {
   }
 }
 .components_container .main_components .banner_component {
-  text-align: center;
-  /*
-  	tag-h2: definimos un margen en el eje-Y para este elemento
-  */
-  /*
-  	tag-h2
-  */
-}
-.components_container .main_components .banner_component h2 {
-  font-size: 4rem;
-  margin: 30px 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  margin: 40px 0;
   /*
   	dispositivos menores a 899px: modificamos el tamaño de
-  	fuente de este elemento
-  */
-  /*
-  	dispositivos menores a 499px: modificamos el tamaño de
   	fuente de este elemento
   */
   /*
   	dispositivos menores a 378px: modificamos el tamaño de
   	fuente de este elemento
   */
+  /*
+  	tag-h1
+  */
 }
 @media (max-width: 899px) {
-  .components_container .main_components .banner_component h2 {
-    font-size: 3.5rem;
-  }
-}
-@media (max-width: 499px) {
-  .components_container .main_components .banner_component h2 {
-    font-size: 3rem;
+  .components_container .main_components .banner_component {
+    font-size: 2rem;
   }
 }
 @media (max-width: 378px) {
-  .components_container .main_components .banner_component h2 {
-    font-size: 2.5rem;
+  .components_container .main_components .banner_component {
+    font-size: 1.5rem;
   }
 }
 .components_container .main_components .banner_component h1 {
+  color: #5c5b5b;
+  /*
+  	tag-strong
+  */
+  /*
+  	tag-span
+  */
+}
+.components_container .main_components .banner_component h1 strong {
   color: #00618b;
-  font-size: 3rem;
 }
 .components_container .main_components .banner_component h1 span {
   color: #e69208;
@@ -426,30 +421,13 @@ body {
 .components_container .main_components .description_component .description_paragraph {
   font-size: 1.5rem;
   line-height: 1.5;
-  margin: 30px 0 50px;
+  margin-bottom: 30px;
   /*
   	tag-strong
   */
 }
 .components_container .main_components .description_component .description_paragraph strong {
   color: #00618b;
-}
-.components_container .main_components .footer_component {
-  /*
-  	footer_container
-  */
-}
-.components_container .main_components .footer_component .footer_container {
-  text-align: center;
-  /*
-  	tag-p: definimos un espaciado en la parte inferior
-  	para este elemento
-  */
-}
-.components_container .main_components .footer_component .footer_container p {
-  color: #ccc;
-  font-size: 1.2rem;
-  padding-bottom: 30px;
 }
 .components_container .main_components .section_banner {
   /*
@@ -531,5 +509,5 @@ body {
   text-align: center;
   color: #ccc;
   font-size: 1.2rem;
-  padding-bottom: 30px;
+  margin: 80px 0 20px;
 }/*# sourceMappingURL=style.css.map */
