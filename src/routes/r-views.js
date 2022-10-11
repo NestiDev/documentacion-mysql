@@ -8,7 +8,7 @@ let router = require("express").Router();
 	de acceso seguido de una funcion de flecha que captura
 	el requermiento del usuario y retorna una respuesta
 */
-router.get("/home", (req, res) => {
+router.get("/", (req, res) => {
 	/* 
 		con el metodo render() definimos que vista va a
 		renderizarse una vez el usuarrio haga un requerimiento
