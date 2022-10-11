@@ -1,0 +1,32 @@
+{
+	"name": "git",
+	"version": "git documnetation 1.1.0",
+	"description": "Esta es una documentacion propia basada en mis conocimientos sobre git y github",
+	"main": "index.js",
+	"scripts": {
+		"start": "node index.js",
+		"nodemon": "nodemon index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/JeffersonSalazar/documentacion-git.github.io.git"
+	},
+	"keywords": [
+		"git",
+		"github",
+		"documentation"
+	],
+	"author": "Jefferson Salazar",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/JeffersonSalazar/documentacion-git.github.io/issues"
+	},
+	"homepage": "https://github.com/JeffersonSalazar/documentacion-git.github.io#readme",
+	"dependencies": {
+		"ejs": "^3.1.8",
+		"express": "^4.18.1"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.19"
+	}
+}
