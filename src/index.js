@@ -24,7 +24,7 @@ const routesViews = require("./routes/r-views");
 	ya que si este, esta dentro de la carpeta src definimos "./"  
 	y si esta por fuera de la carpeta src definimos "src"
 */
-app.use(express.static("./"));
+app.use(express.static(path.join(__dirname, "./")));
 
 /* 
 	primero configuramos el motor de plantilla usado para este
