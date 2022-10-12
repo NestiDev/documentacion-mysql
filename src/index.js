@@ -41,7 +41,7 @@ app.set("views", path.join(__dirname, "./views"));
 /* 
 	hacemos uso de nuestras rutas
 */
-app.use("/", routesViews);
+app.use("", routesViews);
 
 /* 
 	hacemos uso del metodo listen() el cual recibe el puerto seguido

@@ -1,27 +1,18 @@
 {
-	"name": "git",
-	"version": "git documnetation 1.1.0",
-	"description": "Esta es una documentacion propia basada en mis conocimientos sobre git y github",
+	"name": "mysql-documentation",
+	"version": "v1.1.0",
+	"description": "Esta es una documentacion propia basada en mis conocimientos sobre mysql",
 	"main": "index.js",
 	"scripts": {
-		"start": "node index.js",
-		"nodemon": "nodemon index.js"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/JeffersonSalazar/documentacion-git.github.io.git"
+		"start": "node src/index.js",
+		"nodemon": "nodemon src/index.js"
 	},
 	"keywords": [
-		"git",
-		"github",
+		"mysql",
 		"documentation"
 	],
 	"author": "Jefferson Salazar",
 	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/JeffersonSalazar/documentacion-git.github.io/issues"
-	},
-	"homepage": "https://github.com/JeffersonSalazar/documentacion-git.github.io#readme",
 	"dependencies": {
 		"ejs": "^3.1.8",
 		"express": "^4.18.1"

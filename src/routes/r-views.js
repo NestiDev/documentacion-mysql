@@ -146,6 +146,12 @@ router.get("/muchos-muchos-relaciones", (req, res) => {
 	});
 });
 
+router.get("/llave-foranea-relaciones", (req, res) => {
+	res.render("pages/llave-foranea-relaciones", {
+		title: "llave-foranea relaciones",
+	});
+});
+
 /* 
 	finalmente realizamos una exportacion del modulo
 */
