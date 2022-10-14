@@ -31,8 +31,8 @@ $borderOne: #eaecef;
 	body
 */
 body {
-	min-height: 100vh;
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	min-height: 100vh;
 }
 
 /*  
@@ -81,11 +81,13 @@ body {
 				text-decoration: none;
 
 				/*
-					tag-img: definimos un ancho automatico y una alta, finalmente 
+					tag-img: definimos vertical-align: top para remover un 
+					espaciado que generan los navegadores en las img, finalmente 
 					con object-fit ajustamos la img a su contenedor 
 				*/
 				img {
-					width: auto;
+					vertical-align: top;
+					width: 70px;
 					height: 70px;
 					object-fit: cover;
 				}
@@ -136,20 +138,22 @@ body {
 .components_container {
 	/* 
         nav_component: definimos position: fixed junto con sus propiedades 
-		top, bottom, left y z-index para fijar el menu de navegacion y
-		posicionarlo en la parte izquierda y que tome todo el alto de la
-		pantalla, finalemente definimos un ancho y con overflow generamos
-		un scroll en el eje-Y para cuando la altura de la pantalla sea menor 
-		a la altura del menu de navegacion
+		top, left y z-index para fijar el menu de navegacion y
+		posicionarlo en la parte izquierda de la pantalla, con
+		hight: 100vh hacemos que este elemento tome todo el alto de la 
+		pantalla y finalmente definimos un espaciado en el eje-X y con 
+		overflow: auto generamos un scroll en el eje-Y para cuando la altura 
+		de la pantalla sea menor a la altura del menu de navegacion
     */
 	.nav_component {
 		position: fixed;
 		top: $heightFixed;
-		bottom: 0;
 		left: 0;
 		z-index: 8;
 		border-right: 1px solid $borderOne;
 		width: 240px;
+		height: 100vh;
+		padding: 0 25px;
 		overflow: auto;
 
 		/*
@@ -202,10 +206,58 @@ body {
 		}
 
 		/*
-			nav_menu: definimos un espaciado personalizado para este elemento 
+			search_box: definimos flexbox con su propiedad
+			align-items y una altura para centrar de manera vertical 
+			los elementos que este contiene, finalmente definimos 
+			un margen en la parte superior 
+		*/
+		.search_box {
+			display: flex;
+			height: 35px;
+			align-items: center;
+			border: 1px solid $borderOne;
+			border-radius: 50px;
+			margin-top: 30px;
+
+			/*
+				tag-input: definimos border: none y outline: none 
+				para remover un borde que generan los navegadores 
+				en los inputs, finalmente definimos un espaciado 
+				en el eje-Y para este elemento 
+			*/
+			input {
+				border: none;
+				outline: none;
+				background-color: transparent;
+				color: $colorFour;
+				font-size: 17px;
+				letter-spacing: 0.5px;
+				width: 153px;
+				padding: 0 8px 0 14px;
+			}
+
+			/*
+				search_btn
+			*/
+			.search_btn {
+				/*
+					tag-svg: definimos vertical-align: top para remover un 
+					espaciado que generan los navegadores en los iconos 
+				*/
+				svg {
+					vertical-align: top;
+					fill: $colorOne;
+					width: 24px;
+					height: 24px;
+				}
+			}
+		}
+
+		/*
+			nav_menu: definimos un espaciado en el eje-Y para este elemento 
 		*/
 		.nav_menu {
-			padding: 30px 25px;
+			padding: 30px 0;
 
 			/*
 				li_dropdown: definimos un margen en la parte inferior de este 
@@ -245,7 +297,7 @@ body {
 					text-decoration: none;
 					color: $colorFour;
 					font-size: 1.1rem;
-					font-weight: bold;
+					font-weight: 600;
 					display: flex;
 					justify-content: space-between;
 					align-items: center;
@@ -267,10 +319,13 @@ body {
 					}
 
 					/*
-						tag-svg: definimos una transicion para cuando el 
-						icono gira al momento de seleccionar el menu
+						tag-svg: definimos vertical-align: top para remover un 
+						espaciado que generan los navegadores en los iconos, 
+						finalmente una transicion para suavizar el giro del
+						icono al momento de hacer click en li_dropdown
 					*/
 					svg {
+						vertical-align: top;
 						fill: $colorFour;
 						width: 12px;
 						height: 12px;
@@ -383,26 +438,25 @@ body {
 			banner_component
 		*/
 		.banner_component {
-			display: flex;
-			justify-content: center;
-			align-items: center;
+			text-align: center;
 			font-size: 3rem;
-			margin: 40px 0;
+			margin: 30px 0 40px;
 
 			/*
-				dispositivos menores a 899px: modificamos el tamaño de
-				fuente de este elemento
+				dispositivos menores a 952px: modificamos el tamaño de
+				fuente y el margen inferior de este elemento
 			*/
-			@media (max-width: 899px) {
-				font-size: 2rem;
+			@media (max-width: 952px) {
+				font-size: 1.9rem;
+				margin: 30px 0;
 			}
 
 			/*
-				dispositivos menores a 378px: modificamos el tamaño de
+				dispositivos menores a 418px: modificamos el tamaño de
 				fuente de este elemento
 			*/
-			@media (max-width: 378px) {
-				font-size: 1.5rem;
+			@media (max-width: 418px) {
+				font-size: 1.3rem;
 			}
 
 			/*
@@ -477,7 +531,7 @@ body {
 			p {
 				font-size: 1.5rem;
 				line-height: 1.5;
-				margin: 20px 0 80px;
+				margin: 30px 0 80px;
 
 				/*
 					tag-strong
@@ -512,13 +566,15 @@ body {
 				*/
 				.sect_box_img {
 					text-align: center;
-					margin-bottom: 90px;
+					margin-bottom: 80px;
 
 					/*
-						tag-img: definimos un ancho con una altura automatica, 
+						tag-img: definimos vertical-align: top para remover un 
+						espaciado que generan los navegadores en los imagenes, 
 						finalmente con object-fit ajustamos la img a su contenedor 
 					*/
 					img {
+						vertical-align: top;
 						width: 100%;
 						height: auto;
 						object-fit: cover;
@@ -539,15 +595,14 @@ body {
 		}
 
 		/*
-			section_footer: definimos un espaciado en la parte
-			inferior de este elemento 
+			section_footer: definimos un margen personalizado en
+			el eje-Y para este elemento 
 		*/
 		.section_footer {
 			text-align: center;
 			color: $colorFive;
 			font-size: 1.2rem;
-			// padding-bottom: 30px;
-			margin: 80px 0 20px;
+			margin: 60px 0 30px;
 		}
 	}
 }

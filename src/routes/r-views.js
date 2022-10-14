@@ -15,7 +15,7 @@ router.get("/", (req, res) => {
 		a este enpoint, finalmente por medio de un objeto 
 		pasamos el nombre de la vista
 	*/
-	res.render("pages/home", {
+	res.render("pages/index", {
 		title: "home",
 	});
 });
