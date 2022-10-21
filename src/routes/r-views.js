@@ -23,8 +23,8 @@ router.get("/", (req, res) => {
 /* 
 	______________________ acceder ______________________
 */
-router.get("/acceder", (req, res) => {
-	res.render("pages/acceder", {
+router.get("/acceso-mysql", (req, res) => {
+	res.render("pages/acceso-mysql", {
 		title: "acceso a mysql",
 	});
 });
@@ -41,41 +41,41 @@ router.get("/base-datos", (req, res) => {
 /* 
 	______________________ tablas ______________________
 */
-router.get("/tablas-tablas", (req, res) => {
-	res.render("pages/tablas-tablas", {
-		title: "crear tablas",
+router.get("/modelacion-tablas", (req, res) => {
+	res.render("pages/modelacion-tablas", {
+		title: "modelacion de tablas",
 	});
 });
 
-router.get("/campos-tablas", (req, res) => {
-	res.render("pages/campos-tablas", {
-		title: "manipular campos",
+router.get("/manipulacion-tablas", (req, res) => {
+	res.render("pages/manipulacion-tablas", {
+		title: "manipulacion de tablas",
 	});
 });
 
 /* 
-	______________________ datos ______________________
+	______________________ crud ______________________
 */
-router.get("/insertar-datos", (req, res) => {
-	res.render("pages/insertar-datos", {
+router.get("/insertar-crud", (req, res) => {
+	res.render("pages/insertar-crud", {
 		title: "insertar datos",
 	});
 });
 
-router.get("/seleccionar-datos", (req, res) => {
-	res.render("pages/seleccionar-datos", {
+router.get("/seleccionar-crud", (req, res) => {
+	res.render("pages/seleccionar-crud", {
 		title: "seleccionar datos",
 	});
 });
 
-router.get("/actualizar-datos", (req, res) => {
-	res.render("pages/actualizar-datos", {
+router.get("/actualizar-crud", (req, res) => {
+	res.render("pages/actualizar-crud", {
 		title: "actualizar datos",
 	});
 });
 
-router.get("/eliminar-datos", (req, res) => {
-	res.render("pages/eliminar-datos", {
+router.get("/eliminar-crud", (req, res) => {
+	res.render("pages/eliminar-crud", {
 		title: "eliminar datos",
 	});
 });
@@ -149,6 +149,15 @@ router.get("/muchos-muchos-relaciones", (req, res) => {
 router.get("/llave-foranea-relaciones", (req, res) => {
 	res.render("pages/llave-foranea-relaciones", {
 		title: "llave-foranea relaciones",
+	});
+});
+
+/* 
+	______________________ normalizar ______________________
+*/
+router.get("/normalizar-normalizar", (req, res) => {
+	res.render("pages/normalizar-normalizar", {
+		title: "normalizar",
 	});
 });
 

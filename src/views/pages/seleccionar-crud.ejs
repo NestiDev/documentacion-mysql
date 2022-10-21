@@ -39,7 +39,7 @@
 					<!--  
                         tag-h2: en esta definimos el titulo del banner
                     -->
-					<h2>Insertar datos</h2>
+					<h2>Seleccionar</h2>
 
 					<!--  
                         banner_line_titles: esta tag la definimos para crear la
@@ -51,11 +51,11 @@
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
 					<p>
-						Por medio de la consola de comandos podemos insertar
-						datos a una tabla, para esto debemos expecificar que
-						inserte dentro de nuestra tabla unos valores y a
-						continuacion se especifican los valores que tendran los
-						campos.
+						En <strong>mysql</strong> tenemos varias formas de
+						seleccionar datos para esto debemos expecificar que
+						seleccione todos los campos o especificar cuales campos
+						de nuestra tabla queremos seleccionar donde el id sea
+						igual al id con el que se registro el dato.
 					</p>
 				</section>
 
@@ -72,8 +72,8 @@
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
 						<h3>
-							01. Insertar - insert into nombre_tabla values
-							(valores);
+							01. Seleccionar todos los campos - select * from
+							nombre_tabla;
 						</h3>
 
 						<!--  
@@ -81,23 +81,52 @@
 						-->
 						<div class="sect_box_img">
 							<img
-								src="../../assets/images/datos/dat1.png"
-								alt="insertar - insert into nombre_tabla values"
+								src="../../assets/images/datos/dat2.png"
+								alt="seleccionar todos los campos"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
 						<h3>
-							02. Insertar algunos valores - insert into
-							nombre_tabla (nombre_campo, nombre_campo) values
-							(valores);
+							02. Seleccionar algunos campos - select
+							nombre_campo, nombre_campo from nombre_tabla;
 						</h3>
 
 						<div class="sect_box_img">
 							<img
-								src="../../assets/images/datos/dat1.1.png"
-								alt="insertar algunos valores"
+								src="../../assets/images/datos/dat2.1.png"
+								alt="seleccionar algunos campos"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>
+							03. Seleccionar todos los campos de un dato - select
+							nombre_campo, nombre_campo from nombre_tabla where
+							id = value;
+						</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/datos/dat3.png"
+								alt="seleccionar todos los campos de un dato"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>
+							04. Seleccionar un campo validando otro campo -
+							select nombre_campo from nombre_table where
+							nombre_campo = 'value';
+						</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/datos/dat3.1.png"
+								alt="seleccionar un campo validando otro campo"
 							/>
 						</div>
 					</section>
@@ -105,7 +134,7 @@
 					<!--  
                         section_footer
                     -->
-					<footer class="section_footer">End Insertar Datos</footer>
+					<footer class="section_footer">Seleccionar - Crud</footer>
 				</div>
 			</main>
 		</div>

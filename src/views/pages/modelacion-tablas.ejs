@@ -39,7 +39,7 @@
 					<!--  
                         tag-h2: en esta definimos el titulo del banner
                     -->
-					<h2>Actualizar datos</h2>
+					<h2>Modelacion</h2>
 
 					<!--  
                         banner_line_titles: esta tag la definimos para crear la
@@ -51,11 +51,10 @@
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
 					<p>
-						En <strong>mysql</strong> tenemos algunas formas de
-						actualizar datos para esto debemos expecificar que campo
-						o campos de nuestra tabla queremos actualizar con un
-						nuevo valor donde el id sea igual al id con el que se
-						registro el dato.
+						Por medio de la consola de comandos podemos crear,
+						mostrar, conocer la estructura, editar y eliminar una
+						tabla en <strong>mysql</strong> de una manera rapida y
+						sencilla.
 					</p>
 				</section>
 
@@ -72,8 +71,7 @@
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
 						<h3>
-							01. Actualizar un campo - update nombre_tabla set
-							nombre_campo = 'new_value' where id = value;
+							01. Crear - create table nombre_tabla (valores);
 						</h3>
 
 						<!--  
@@ -81,23 +79,55 @@
 						-->
 						<div class="sect_box_img">
 							<img
-								src="../../assets/images/datos/dat5.png"
-								alt="actualizar un campo"
+								src="../../assets/images/tablas/tab1.png"
+								alt="crear - create tabla nombre_tabla ()"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>02. Mostrar - show tables;</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/tablas/tab2.png"
+								alt="mostrar - show tables"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>03. Estructura - describe nombre_tabla;</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/tablas/tab3.png"
+								alt="estructura - describe nombre_tabla"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
 						<h3>
-							02. Actualizar algunos o todos los campos - update
-							nombre_tabla set nombre_campo = new_value,
-							nombre_campo = 'new_value' where id = value;
+							04. Editar - alter table nombre_tabla rename
+							nuevo_nombre;
 						</h3>
 
 						<div class="sect_box_img">
 							<img
-								src="../../assets/images/datos/dat5.1.png"
-								alt="actualizar algunos o todos los campos"
+								src="../../assets/images/tablas/tab5.png"
+								alt="editar - alter table nombre_tabla rename nuevo_nombre"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>05. Eliminar - drop table nombre_tabla;</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/tablas/tab4.png"
+								alt="eliminar - drop table nombre_tabla"
 							/>
 						</div>
 					</section>
@@ -105,7 +135,7 @@
 					<!--  
                         section_footer
                     -->
-					<footer class="section_footer">End Actualizar Datos</footer>
+					<footer class="section_footer">Modelacion - Tablas</footer>
 				</div>
 			</main>
 		</div>

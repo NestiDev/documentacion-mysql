@@ -39,7 +39,7 @@
 					<!--  
                         tag-h2: en esta definimos el titulo del banner
                     -->
-					<h2>Accerder</h2>
+					<h2>Manipulacion</h2>
 
 					<!--  
                         banner_line_titles: esta tag la definimos para crear la
@@ -51,9 +51,12 @@
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
 					<p>
-						Para ejecutar los comandos <strong>mysql</strong> por
-						consola, primero debemos seguir una serie de pasos los
-						cuales nos permitiran acceder a nuestra base de datos.
+						Se puede agregar, editar y eliminar campos de una tabla
+						de una manera rapida y sencilla, en cuanto a la edicion
+						contamos con dos sentencias, <strong>change</strong> nos
+						permite modificar el campo conservando los valores y
+						<strong>modify</strong> nos permite modificar los
+						valores conservando el campo.
 					</p>
 				</section>
 
@@ -69,48 +72,60 @@
 						<!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
-						<h3>01. Activar xampp</h3>
+						<h3>
+							01. Agregar - alter table nombre_tabla / add
+							nombre_campo valores;
+						</h3>
 
 						<!--  
 							sect_box_img: contenedor de 1 tag-img
 						-->
 						<div class="sect_box_img">
 							<img
-								src="../../assets/images/gestor/ges1.png"
-								alt="activar xampp"
+								src="../../assets/images/tablas/tab8.png"
+								alt="agregar - alter table nombre_tabla"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
-						<h3>02. Definir la ruta de la carpeta bin</h3>
+						<h3>
+							02. Cambiar - alter table nombre_tabla / change
+							nombre_campo nuevo_campo valores;
+						</h3>
 
 						<div class="sect_box_img">
 							<img
-								src="../../assets/images/gestor/ges2.png"
-								alt="definir la ruta de la carpeta bin"
+								src="../../assets/images/tablas/tab7.png"
+								alt="editar - alter table nombre_tabla"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
-						<h3>03. Ingresar las credenciales de usuario</h3>
+						<h3>
+							03. Modificar - alter table nombre_tabla / modify
+							nombre_campo nuevos_valores;
+						</h3>
 
 						<div class="sect_box_img">
 							<img
-								src="../../assets/images/gestor/ges3.png"
-								alt="ingresar las credenciales de usuario"
+								src="../../assets/images/tablas/tab7.1.png"
+								alt="editar - alter table nombre_tabla"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
-						<h3>04. Salir de mysql</h3>
+						<h3>
+							04. Eliminar - alter table nombre_tabla / drop
+							nombre_campo;
+						</h3>
 
 						<div class="sect_box_img">
 							<img
-								src="../../assets/images/gestor/ges4.png"
-								alt="salir de mysql"
+								src="../../assets/images/tablas/tab6.png"
+								alt="eliminar - alter table nombre_tabla"
 							/>
 						</div>
 					</section>
@@ -118,7 +133,9 @@
 					<!--  
                         section_footer
                     -->
-					<footer class="section_footer">End Acceder a Mysql</footer>
+					<footer class="section_footer">
+						Manipulacion - Tablas
+					</footer>
 				</div>
 			</main>
 		</div>

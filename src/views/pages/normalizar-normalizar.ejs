@@ -39,7 +39,7 @@
 					<!--  
                         tag-h2: en esta definimos el titulo del banner
                     -->
-					<h2>Eliminar datos</h2>
+					<h2>Normalizar</h2>
 
 					<!--  
                         banner_line_titles: esta tag la definimos para crear la
@@ -51,10 +51,12 @@
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
 					<p>
-						Por medio de la consola de comandos podemos eliminar
-						datos de una tabla, para esto debemos expecificar que
-						elimine de nuestra tabla los datos donde el id sea igual
-						al id con el que se registro el dato.
+						Al momento de <strong>normalizar</strong> debemos tener
+						unos puntos en consideracion los cuales serian.
+						Identificar que registros de la tabla pueden conformar
+						una entidad, separar los campos que no pertenezcan a las
+						entidades, eliminar los datos redundantes y finalmente
+						definir la relacion.
 					</p>
 				</section>
 
@@ -70,18 +72,59 @@
 						<!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
-						<h3>
-							01. Eliminar - delete from nombre_tabla where id =
-							value;
-						</h3>
+						<h3>01. Tabla a normalizar</h3>
 
 						<!--  
 							sect_box_img: contenedor de 1 tag-img
 						-->
 						<div class="sect_box_img">
 							<img
-								src="../../assets/images/datos/dat4.png"
-								alt="eliminar - delete from nombre_tabla"
+								src="../../assets/images/normalizacion/nor1.png"
+								alt="tabla a normalizar"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>02. Identificacion y separacion de entidades</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/normalizacion/nor2.png"
+								alt="identificacion y separacion de entidades"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>03. Separar los datos variables de las tablas</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/normalizacion/nor5.png"
+								alt="separar los datos variables de las tablas"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>04. Eliminacion de datos redundantes</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/normalizacion/nor3.png"
+								alt="eliminacion de datos redundantes"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>05. Relacionar las tablas</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/normalizacion/nor4.png"
+								alt="relacionar las tablas"
 							/>
 						</div>
 					</section>
@@ -89,7 +132,9 @@
 					<!--  
                         section_footer
                     -->
-					<footer class="section_footer">End Eliminar Datos</footer>
+					<footer class="section_footer">
+						Normalizar - Normalizacion
+					</footer>
 				</div>
 			</main>
 		</div>

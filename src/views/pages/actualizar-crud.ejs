@@ -39,7 +39,7 @@
 					<!--  
                         tag-h2: en esta definimos el titulo del banner
                     -->
-					<h2>Seleccionar datos</h2>
+					<h2>Actualizar</h2>
 
 					<!--  
                         banner_line_titles: esta tag la definimos para crear la
@@ -51,11 +51,11 @@
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
 					<p>
-						En <strong>mysql</strong> tenemos varias formas de
-						seleccionar datos para esto debemos expecificar que
-						seleccione todos los campos o especificar cuales campos
-						de nuestra tabla queremos seleccionar donde el id sea
-						igual al id con el que se registro el dato.
+						En <strong>mysql</strong> tenemos algunas formas de
+						actualizar datos para esto debemos expecificar que campo
+						o campos de nuestra tabla queremos actualizar con un
+						nuevo valor donde el id sea igual al id con el que se
+						registro el dato.
 					</p>
 				</section>
 
@@ -72,8 +72,8 @@
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
 						<h3>
-							01. Seleccionar todos los campos - select * from
-							nombre_tabla;
+							01. Actualizar un campo - update nombre_tabla set
+							nombre_campo = 'new_value' where id = value;
 						</h3>
 
 						<!--  
@@ -81,52 +81,23 @@
 						-->
 						<div class="sect_box_img">
 							<img
-								src="../../assets/images/datos/dat2.png"
-								alt="seleccionar todos los campos"
+								src="../../assets/images/datos/dat5.png"
+								alt="actualizar un campo"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
 						<h3>
-							02. Seleccionar algunos campos - select
-							nombre_campo, nombre_campo from nombre_tabla;
+							02. Actualizar algunos o todos los campos - update
+							nombre_tabla set nombre_campo = new_value,
+							nombre_campo = 'new_value' where id = value;
 						</h3>
 
 						<div class="sect_box_img">
 							<img
-								src="../../assets/images/datos/dat2.1.png"
-								alt="seleccionar algunos campos"
-							/>
-						</div>
-					</section>
-
-					<section class="sect_content">
-						<h3>
-							03. Seleccionar todos los campos de un dato - select
-							nombre_campo, nombre_campo from nombre_tabla where
-							id = value;
-						</h3>
-
-						<div class="sect_box_img">
-							<img
-								src="../../assets/images/datos/dat3.png"
-								alt="seleccionar todos los campos de un dato"
-							/>
-						</div>
-					</section>
-
-					<section class="sect_content">
-						<h3>
-							04. Seleccionar un campo validando otro campo -
-							select nombre_campo from nombre_table where
-							nombre_campo = 'value';
-						</h3>
-
-						<div class="sect_box_img">
-							<img
-								src="../../assets/images/datos/dat3.1.png"
-								alt="seleccionar un campo validando otro campo"
+								src="../../assets/images/datos/dat5.1.png"
+								alt="actualizar algunos o todos los campos"
 							/>
 						</div>
 					</section>
@@ -134,9 +105,7 @@
 					<!--  
                         section_footer
                     -->
-					<footer class="section_footer">
-						End Seleccionar Datos
-					</footer>
+					<footer class="section_footer">Actualizar - Crud</footer>
 				</div>
 			</main>
 		</div>
