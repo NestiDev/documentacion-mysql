@@ -51,10 +51,11 @@
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
 					<p>
-						Por medio de la consola de comandos podemos eliminar
-						datos de una tabla, para esto debemos expecificar que
-						elimine de nuestra tabla los datos donde el id sea igual
-						al id con el que se registro el dato.
+						En <strong>mysql</strong> tenemos varias formas de
+						eliminar valores de un campo, para esto debemos
+						expecificar que elimine de nuestra tabla los valores
+						donde el campo debe ser igual al valor con el que se
+						guardo el dato.
 					</p>
 				</section>
 
@@ -70,10 +71,16 @@
 						<!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
-						<h3>
-							01. Eliminar - delete from nombre_tabla where id =
-							value;
-						</h3>
+						<h3>01. Eliminando un valor de un campo</h3>
+
+						<!--  
+                            code_box: en esta definimos la guia de codigo en ejecucion
+                        -->
+						<p class="code_box">
+							<span>></span> delete
+							<strong>from</strong> nombre_tabla
+							<strong>where</strong> campo = valor;
+						</p>
 
 						<!--  
 							sect_box_img: contenedor de 1 tag-img
@@ -81,7 +88,24 @@
 						<div class="sect_box_img">
 							<img
 								src="../../assets/images/datos/dat4.png"
-								alt="eliminar - delete from nombre_tabla"
+								alt="eliminando un valor de un campo"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>02. Eliminando multiples valores de un campo</h3>
+
+						<p class="code_box">
+							<span>></span> delete
+							<strong>from</strong> nombre_tabla
+							<strong>where</strong> campo = valor;
+						</p>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/datos/ext2.png"
+								alt="eliminando multiples valores de un campo"
 							/>
 						</div>
 					</section>

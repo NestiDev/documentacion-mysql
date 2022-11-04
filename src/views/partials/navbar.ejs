@@ -5,7 +5,7 @@
 	<!--  
 		tag-input: en esta definimos el buscador
 	-->
-	<input type="text" name="search" placeholder="Buscar" />
+	<input type="text" name="search" autocomplete="off" placeholder="Buscar" />
 
 	<!--  
 		tag-a: contiene 1 tag-svg
@@ -64,9 +64,11 @@
 			:navegacion interno
 		-->
 		<ul class="dropdown_menu">
-			<li><a href="/modelacion-tablas">a. Modelacion</a></li>
+			<li><a href="/tipos-tablas">a. Tipos de datos</a></li>
 
-			<li><a href="/manipulacion-tablas">b. Manipulacion</a></li>
+			<li><a href="/modelacion-tablas">b. Modelacion</a></li>
+
+			<li><a href="/manipulacion-tablas">c. Manipulacion</a></li>
 		</ul>
 	</li>
 
@@ -108,15 +110,13 @@
 
 			<li><a href="/comparadores-consultas">b. Comparadores</a></li>
 
-			<li><a href="/or-and-consultas">c. Or - And</a></li>
+			<li><a href="/and-or-consultas">c. And - Or</a></li>
 
-			<li><a href="/compuestos-consultas">d. Compuestos</a></li>
+			<li><a href="/like-consultas">d. Like</a></li>
 
-			<li><a href="/like-consultas">e. Like</a></li>
+			<li><a href="/limit-consultas">e. Limit</a></li>
 
-			<li><a href="/limit-consultas">f. Limit</a></li>
-
-			<li><a href="/max-min-consultas">g. Max - Min</a></li>
+			<li><a href="/max-min-consultas">f. Max - Min</a></li>
 		</ul>
 	</li>
 
@@ -160,5 +160,9 @@
 
 			<li><a href="/normalizar-normalizar">c. Normalizar</a></li>
 		</ul>
+	</li>
+
+	<li class="li_dropdown">
+		<a href="#"> 08. Roles</a>
 	</li>
 </ul>

@@ -52,10 +52,11 @@
                     -->
 					<p>
 						En <strong>mysql</strong> tenemos varias formas de
-						seleccionar datos para esto debemos expecificar que
-						seleccione todos los campos o especificar cuales campos
-						de nuestra tabla queremos seleccionar donde el id sea
-						igual al id con el que se registro el dato.
+						seleccionar valores de un campo, para esto debemos
+						expecificar que seleccione todos los campos o
+						especificar cuales campos de nuestra tabla queremos
+						seleccionar donde el campo debe ser igual al valor con
+						el que se guardo el dato.
 					</p>
 				</section>
 
@@ -72,9 +73,16 @@
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
 						<h3>
-							01. Seleccionar todos los campos - select * from
-							nombre_tabla;
+							01. Seleccionando todos los valores de una tabla
 						</h3>
+
+						<!--  
+                            code_box: en esta definimos la guia de codigo en ejecucion
+                        -->
+						<p class="code_box">
+							<span>></span> select *
+							<strong>from</strong> nombre_tabla;
+						</p>
 
 						<!--  
 							sect_box_img: contenedor de 1 tag-img
@@ -82,51 +90,62 @@
 						<div class="sect_box_img">
 							<img
 								src="../../assets/images/datos/dat2.png"
-								alt="seleccionar todos los campos"
+								alt="seleccionando todos los valores de una tabla"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
 						<h3>
-							02. Seleccionar algunos campos - select
-							nombre_campo, nombre_campo from nombre_tabla;
+							02. Seleccionando valores personalizados de una
+							tabla
 						</h3>
+
+						<p class="code_box">
+							<span>></span> select nombre_campo, nombre_campo
+							<strong>from</strong> nombre_tabla;
+						</p>
 
 						<div class="sect_box_img">
 							<img
 								src="../../assets/images/datos/dat2.1.png"
-								alt="seleccionar algunos campos"
+								alt="seleccionando valores personalizados de una tabla"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
 						<h3>
-							03. Seleccionar todos los campos de un dato - select
-							nombre_campo, nombre_campo from nombre_tabla where
-							id = value;
+							03. Seleccionando multiples valores por un campo
 						</h3>
+
+						<p class="code_box">
+							<span>></span> select nombre_campo, nombre_campo
+							<strong>from</strong> nombre_tabla
+							<strong>where</strong> campo = valor;
+						</p>
 
 						<div class="sect_box_img">
 							<img
 								src="../../assets/images/datos/dat3.png"
-								alt="seleccionar todos los campos de un dato"
+								alt="seleccionando multiples valores por un campo"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
-						<h3>
-							04. Seleccionar un campo validando otro campo -
-							select nombre_campo from nombre_table where
-							nombre_campo = 'value';
-						</h3>
+						<h3>04. Seleccionando un valor por un campo</h3>
+
+						<p class="code_box">
+							<span>></span> select nombre_campo
+							<strong>from</strong> nombre_tabla
+							<strong>where</strong> campo = valor;
+						</p>
 
 						<div class="sect_box_img">
 							<img
 								src="../../assets/images/datos/dat3.1.png"
-								alt="seleccionar un campo validando otro campo"
+								alt="seleccionando un valor por un campo"
 							/>
 						</div>
 					</section>

@@ -51,9 +51,12 @@
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
 					<p>
-						Para ejecutar los comandos <strong>mysql</strong> por
-						consola, primero debemos seguir una serie de pasos los
-						cuales nos permitiran acceder a nuestra base de datos.
+						Antes de ejecutar cualquier comando por consola, primero
+						debemos seguir una serie de pasos los cuales nos
+						permitiran trabajar con <strong>mysql</strong>
+						estos consisten en iniciar el motor de base de datos,
+						luego debemos acceder a la carpeta de comandos y
+						finalmente definir nuestras credenciales de usuario.
 					</p>
 				</section>
 
@@ -69,7 +72,7 @@
 						<!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
-						<h3>01. Activar xampp</h3>
+						<h3>01. Iniciando motor de base de datos</h3>
 
 						<!--  
 							sect_box_img: contenedor de 1 tag-img
@@ -77,13 +80,20 @@
 						<div class="sect_box_img">
 							<img
 								src="../../assets/images/gestor/ges1.png"
-								alt="activar xampp"
+								alt="iniciando motor de base de datos"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
 						<h3>02. Definir la ruta de la carpeta bin</h3>
+
+						<!--  
+                            code_box: en esta definimos la guia de codigo en ejecucion
+                        -->
+						<p class="code_box">
+							<span>></span> cd c:\xampp\mysql\bin
+						</p>
 
 						<div class="sect_box_img">
 							<img
@@ -94,7 +104,11 @@
 					</section>
 
 					<section class="sect_content">
-						<h3>03. Ingresar las credenciales de usuario</h3>
+						<h3>03. Ingreso de credenciales de usuario</h3>
+
+						<p class="code_box">
+							<span>></span> mysql -u root -h localhost
+						</p>
 
 						<div class="sect_box_img">
 							<img
@@ -105,12 +119,14 @@
 					</section>
 
 					<section class="sect_content">
-						<h3>04. Salir de mysql</h3>
+						<h3>04. Saliendo de mysql</h3>
+
+						<p class="code_box"><span>></span> exit / quit</p>
 
 						<div class="sect_box_img">
 							<img
 								src="../../assets/images/gestor/ges4.png"
-								alt="salir de mysql"
+								alt="saliendo de mysql"
 							/>
 						</div>
 					</section>
@@ -118,7 +134,7 @@
 					<!--  
                         section_footer
                     -->
-					<footer class="section_footer">Acceso a Mysql</footer>
+					<footer class="section_footer">Acceso - Mysql</footer>
 				</div>
 			</main>
 		</div>

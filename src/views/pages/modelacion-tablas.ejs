@@ -52,7 +52,7 @@
                     -->
 					<p>
 						Por medio de la consola de comandos podemos crear,
-						mostrar, conocer la estructura, editar y eliminar una
+						mostrar, conocer la estructura, modificar y eliminar una
 						tabla en <strong>mysql</strong> de una manera rapida y
 						sencilla.
 					</p>
@@ -70,9 +70,16 @@
 						<!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
-						<h3>
-							01. Crear - create table nombre_tabla (valores);
-						</h3>
+						<h3>01. Creando una tabla</h3>
+
+						<!--  
+                            code_box: en esta definimos la guia de codigo en ejecucion
+                        -->
+						<p class="code_box">
+							<span>></span> create
+							<strong>table</strong> nombre_tabla ( <br />
+							campos - propiedades );
+						</p>
 
 						<!--  
 							sect_box_img: contenedor de 1 tag-img
@@ -80,54 +87,70 @@
 						<div class="sect_box_img">
 							<img
 								src="../../assets/images/tablas/tab1.png"
-								alt="crear - create tabla nombre_tabla ()"
+								alt="creando una tabla"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
-						<h3>02. Mostrar - show tables;</h3>
+						<h3>02. Mostrando tablas creadas</h3>
+
+						<p class="code_box">
+							<span>></span> show <strong>tables</strong>;
+						</p>
 
 						<div class="sect_box_img">
 							<img
 								src="../../assets/images/tablas/tab2.png"
-								alt="mostrar - show tables"
+								alt="mostrando tablas creadas"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
-						<h3>03. Estructura - describe nombre_tabla;</h3>
+						<h3>03. Estructura de una tabla</h3>
+
+						<p class="code_box">
+							<span>></span> describe nombre_tabla;
+						</p>
 
 						<div class="sect_box_img">
 							<img
 								src="../../assets/images/tablas/tab3.png"
-								alt="estructura - describe nombre_tabla"
+								alt="estructura de una tabla"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
-						<h3>
-							04. Editar - alter table nombre_tabla rename
-							nuevo_nombre;
-						</h3>
+						<h3>04. Modificando el nombre de una tabla</h3>
+
+						<p class="code_box">
+							<span>></span> alter
+							<strong>table</strong> nombre_tabla
+							<strong>rename</strong> nuevo_nombre;
+						</p>
 
 						<div class="sect_box_img">
 							<img
 								src="../../assets/images/tablas/tab5.png"
-								alt="editar - alter table nombre_tabla rename nuevo_nombre"
+								alt="modificando el nombre de una tabla"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
-						<h3>05. Eliminar - drop table nombre_tabla;</h3>
+						<h3>05. Eliminando una tabla</h3>
+
+						<p class="code_box">
+							<span>></span> drop
+							<strong>table</strong> nombre_tabla;
+						</p>
 
 						<div class="sect_box_img">
 							<img
 								src="../../assets/images/tablas/tab4.png"
-								alt="eliminar - drop table nombre_tabla"
+								alt="eliminando una tabla"
 							/>
 						</div>
 					</section>

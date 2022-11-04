@@ -41,6 +41,12 @@ router.get("/base-datos", (req, res) => {
 /* 
 	______________________ tablas ______________________
 */
+router.get("/tipos-tablas", (req, res) => {
+	res.render("pages/tipos-tablas", {
+		title: "tipos de datos",
+	});
+});
+
 router.get("/modelacion-tablas", (req, res) => {
 	res.render("pages/modelacion-tablas", {
 		title: "modelacion de tablas",
@@ -95,15 +101,9 @@ router.get("/comparadores-consultas", (req, res) => {
 	});
 });
 
-router.get("/compuestos-consultas", (req, res) => {
-	res.render("pages/compuestos-consultas", {
-		title: "compuestos consultas",
-	});
-});
-
-router.get("/or-and-consultas", (req, res) => {
-	res.render("pages/or-and-consultas", {
-		title: "or-and consultas",
+router.get("/and-or-consultas", (req, res) => {
+	res.render("pages/and-or-consultas", {
+		title: "operadores and-or consultas",
 	});
 });
 
@@ -160,6 +160,10 @@ router.get("/normalizar-normalizar", (req, res) => {
 		title: "normalizar",
 	});
 });
+
+/* 
+	______________________ roles ______________________
+*/
 
 /* 
 	finalmente realizamos una exportacion del modulo

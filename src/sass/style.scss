@@ -18,6 +18,11 @@ $colorFive: #ccc;
 $borderOne: #eaecef;
 
 /*
+	variables para definir sombras
+*/
+$shadowOne: #b3b1b14d;
+
+/*
 	formatiamos las margenes y espaciados que definen los
 	navegadores por defecto
 */
@@ -55,7 +60,7 @@ body {
 		definimos una sombra cuando inicia el scroll
 	*/
 	&.js_header_scroll {
-		box-shadow: 0 2px 5px #b3b1b14d;
+		box-shadow: 0 2px 5px $shadowOne;
 	}
 
 	/*
@@ -206,34 +211,40 @@ body {
 		}
 
 		/*
-			search_box: definimos flexbox con su propiedad
-			align-items y una altura para centrar de manera vertical 
-			los elementos que este contiene, finalmente definimos 
+			search_box: definimos position: relative debido a que uno de sus 
+            elementos hijos tiene definido position: absolute, finalmente definimos 
 			un margen en la parte superior 
 		*/
 		.search_box {
-			display: flex;
-			height: 35px;
-			align-items: center;
-			border: 1px solid $borderOne;
-			border-radius: 50px;
+			position: relative;
 			margin-top: 30px;
 
 			/*
-				tag-input: definimos border: none y outline: none 
-				para remover un borde que generan los navegadores 
-				en los inputs, finalmente definimos un espaciado 
-				en el eje-Y para este elemento 
+				tag-input: definimos outline: none  para remover el borde que 
+				generan los navegadores en los inputs, finalmente definimos 
+				un espaciado en el eje-Y para este elemento 
 			*/
 			input {
-				border: none;
 				outline: none;
 				background-color: transparent;
 				color: $colorFour;
+				border: 1px solid $borderOne;
+				border-radius: 50px;
 				font-size: 17px;
 				letter-spacing: 0.5px;
-				width: 153px;
+				width: 100%;
+				height: 35px;
 				padding: 0 8px 0 14px;
+				transition: box-shadow 0.2s;
+
+				/*
+					cuando tag-input tiene el foco, modificamos 
+					el color del borde y añadimos una sombra
+				*/
+				&:focus {
+					border: 1px solid #00618b95;
+					box-shadow: 0 0 8px 0 $shadowOne;
+				}
 			}
 
 			/*
@@ -242,10 +253,15 @@ body {
 			.search_btn {
 				/*
 					tag-svg: definimos vertical-align: top para remover un 
-					espaciado que generan los navegadores en los iconos 
+					espaciado que generan los navegadores en los iconos, 
+					finalmente con position: absolute y sus propiedades top
+					y right posicionamos el icono dentro del input
 				*/
 				svg {
 					vertical-align: top;
+					position: absolute;
+					top: 6px;
+					right: 12px;
 					fill: $colorOne;
 					width: 24px;
 					height: 24px;
@@ -254,10 +270,12 @@ body {
 		}
 
 		/*
-			nav_menu: definimos un espaciado en el eje-Y para este elemento 
+			nav_menu: definimos un espaciado personalizado en el eje-Y para este elemento 
+			el espaciado inferior permite solucionar un error que se presenta 
+			impidiendo que el ultimo item del menu se vea correctamente
 		*/
 		.nav_menu {
-			padding: 30px 0;
+			padding: 30px 0 70px;
 
 			/*
 				li_dropdown: definimos un margen en la parte inferior de este 
@@ -514,6 +532,22 @@ body {
 			h2 {
 				font-size: 2.8rem;
 				margin-top: 30px;
+
+				/*
+					dispositivos menores a 350px: modificamos el tamaño de
+					fuente para este elemento
+				*/
+				@media (max-width: 350px) {
+					font-size: 2.6rem;
+				}
+
+				/*
+					dispositivos menores a 330px: modificamos el tamaño de
+					fuente para este elemento
+				*/
+				@media (max-width: 330px) {
+					font-size: 2.3rem;
+				}
 			}
 
 			/*
@@ -558,6 +592,27 @@ body {
 					font-size: 2rem;
 					line-height: 1.2;
 					margin-bottom: 40px;
+				}
+
+				/*
+					code_box: definimos un margen en la parte inferior de este 
+					elemento y un espaciado de 12px para todos los ejes
+				*/
+				.code_box {
+					background-color: #343d4d;
+					color: $colorThree;
+					border-radius: 5px;
+					box-shadow: 0 2px 6px 0 #ccc;
+					margin-bottom: 40px;
+					padding: 12px;
+
+					/*
+						tag-span y tag-strong
+					*/
+					span,
+					strong {
+						color: $colorOne;
+					}
 				}
 
 				/*

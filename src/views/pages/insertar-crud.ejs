@@ -51,11 +51,11 @@
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
 					<p>
-						Por medio de la consola de comandos podemos insertar
-						datos a una tabla, para esto debemos expecificar que
-						inserte dentro de nuestra tabla unos valores y a
-						continuacion se especifican los valores que tendran los
-						campos.
+						<strong>mysql</strong> nos ofrece varias formas de
+						insertar valores en un campo o en varios campos, para
+						esto debemos expecificar que inserte dentro de nuestra
+						tabla los valores de acuerdo a los campos que tiene
+						dicha tabla.
 					</p>
 				</section>
 
@@ -71,10 +71,16 @@
 						<!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
-						<h3>
-							01. Insertar - insert into nombre_tabla values
-							(valores);
-						</h3>
+						<h3>01. Insertando valores en una tabla</h3>
+
+						<!--  
+                            code_box: en esta definimos la guia de codigo en ejecucion
+                        -->
+						<p class="code_box">
+							<span>></span> insert
+							<strong>into</strong> nombre_tabla
+							<strong>values</strong> (valores);
+						</p>
 
 						<!--  
 							sect_box_img: contenedor de 1 tag-img
@@ -82,22 +88,45 @@
 						<div class="sect_box_img">
 							<img
 								src="../../assets/images/datos/dat1.png"
-								alt="insertar - insert into nombre_tabla values"
+								alt="insertando valores en una tabla"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>02. Insertando valores especificos en una tabla</h3>
+
+						<p class="code_box">
+							<span>></span> insert
+							<strong>into</strong> nombre_tabla (nombre_campo,
+							nombre_campo) <strong>values</strong> (valores);
+						</p>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/datos/dat1.1.png"
+								alt="insertando valores especificos en una tabla"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
 						<h3>
-							02. Insertar algunos valores - insert into
-							nombre_tabla (nombre_campo, nombre_campo) values
-							(valores);
+							03. Insertando valores en una tabla con llaves
+							foraneas
 						</h3>
+
+						<p class="code_box">
+							<span>></span> insert
+							<strong>into</strong> nombre_tabla
+							<strong>values</strong> (valores, valores_foraneos);
+						</p>
 
 						<div class="sect_box_img">
 							<img
-								src="../../assets/images/datos/dat1.1.png"
-								alt="insertar algunos valores"
+								src="../../assets/images/datos/ext1.png"
+								alt="insertando valores en una tabla con llaves
+							foraneas"
 							/>
 						</div>
 					</section>
