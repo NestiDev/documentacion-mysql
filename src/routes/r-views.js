@@ -155,9 +155,21 @@ router.get("/llave-foranea-relaciones", (req, res) => {
 /* 
 	______________________ normalizar ______________________
 */
-router.get("/normalizar-normalizar", (req, res) => {
-	res.render("pages/normalizar-normalizar", {
-		title: "normalizar",
+router.get("/normalizar-normalizacion", (req, res) => {
+	res.render("pages/normalizar-normalizacion", {
+		title: "normalizar datos",
+	});
+});
+
+router.get("/import-normalizacion", (req, res) => {
+	res.render("pages/import-normalizacion", {
+		title: "importar datos",
+	});
+});
+
+router.get("/export-normalizacion", (req, res) => {
+	res.render("pages/export-normalizacion", {
+		title: "exportar datos",
 	});
 });
 

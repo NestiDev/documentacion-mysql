@@ -592,6 +592,14 @@ body {
 					font-size: 2rem;
 					line-height: 1.2;
 					margin-bottom: 40px;
+
+					/*
+						dispositivos menores a 336px: modificamos el tamaño de
+						fuente de este elemento
+					*/
+					@media (max-width: 336px) {
+						font-size: 1.7rem;
+					}
 				}
 
 				/*
