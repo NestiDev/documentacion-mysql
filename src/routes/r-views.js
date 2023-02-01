@@ -9,168 +9,177 @@ let router = require("express").Router();
 	el requermiento del usuario y retorna una respuesta
 */
 router.get("/", (req, res) => {
-	/* 
+    /* 
 		con el metodo render() definimos que vista va a
 		renderizarse una vez el usuarrio haga un requerimiento
 		a este enpoint, finalmente por medio de un objeto 
 		pasamos el nombre de la vista
 	*/
-	res.render("pages/index", {
-		title: "home",
-	});
+    res.render("pages/index", {
+        title: "home",
+    });
 });
 
 /* 
-	______________________ acceder ______________________
+	______________________ inicio ______________________
 */
-router.get("/acceso-mysql", (req, res) => {
-	res.render("pages/acceso-mysql", {
-		title: "acceso a mysql",
-	});
+router.get("/inicio", (req, res) => {
+    res.render("pages/inicio", {
+        title: "inicio",
+    });
 });
 
 /* 
 	______________________ base de datos ______________________
 */
 router.get("/base-datos", (req, res) => {
-	res.render("pages/base-datos", {
-		title: "crear base-datos",
-	});
+    res.render("pages/base-datos", {
+        title: "base de datos",
+    });
 });
 
 /* 
 	______________________ tablas ______________________
 */
-router.get("/tipos-tablas", (req, res) => {
-	res.render("pages/tipos-tablas", {
-		title: "tipos de datos",
-	});
+router.get("/tablas-tipo-datos", (req, res) => {
+    res.render("pages/tablas-tipo-datos", {
+        title: "tablas tipos de datos",
+    });
 });
 
-router.get("/modelacion-tablas", (req, res) => {
-	res.render("pages/modelacion-tablas", {
-		title: "modelacion de tablas",
-	});
+router.get("/tablas-modelacion", (req, res) => {
+    res.render("pages/tablas-modelacion", {
+        title: "tablas modelacion",
+    });
 });
 
-router.get("/manipulacion-tablas", (req, res) => {
-	res.render("pages/manipulacion-tablas", {
-		title: "manipulacion de tablas",
-	});
+router.get("/tablas-manipulacion", (req, res) => {
+    res.render("pages/tablas-manipulacion", {
+        title: "tablas manipulacion",
+    });
 });
 
 /* 
-	______________________ crud ______________________
+	______________________ sentencias ______________________
 */
-router.get("/insertar-crud", (req, res) => {
-	res.render("pages/insertar-crud", {
-		title: "insertar datos",
-	});
+router.get("/sentencias-insert", (req, res) => {
+    res.render("pages/sentencias-insert", {
+        title: "sentencia insert",
+    });
 });
 
-router.get("/seleccionar-crud", (req, res) => {
-	res.render("pages/seleccionar-crud", {
-		title: "seleccionar datos",
-	});
+router.get("/sentencias-select", (req, res) => {
+    res.render("pages/sentencias-select", {
+        title: "sentencia select",
+    });
 });
 
-router.get("/actualizar-crud", (req, res) => {
-	res.render("pages/actualizar-crud", {
-		title: "actualizar datos",
-	});
+router.get("/sentencias-update", (req, res) => {
+    res.render("pages/sentencias-update", {
+        title: "sentencia update",
+    });
 });
 
-router.get("/eliminar-crud", (req, res) => {
-	res.render("pages/eliminar-crud", {
-		title: "eliminar datos",
-	});
+router.get("/sentencias-delete", (req, res) => {
+    res.render("pages/sentencias-delete", {
+        title: "sentencia delete",
+    });
 });
 
 /* 
 	______________________ consultas ______________________
 */
-router.get("/asc-desc-consultas", (req, res) => {
-	res.render("pages/asc-desc-consultas", {
-		title: "asc-desc consultas",
-	});
+router.get("/consultas-asc-desc", (req, res) => {
+    res.render("pages/consultas-asc-desc", {
+        title: "consultas asc-desc",
+    });
 });
 
-router.get("/comparadores-consultas", (req, res) => {
-	res.render("pages/comparadores-consultas", {
-		title: "comparadores consultas",
-	});
+router.get("/consultas-comparadores", (req, res) => {
+    res.render("pages/consultas-comparadores", {
+        title: "consultas comparadores",
+    });
 });
 
-router.get("/and-or-consultas", (req, res) => {
-	res.render("pages/and-or-consultas", {
-		title: "operadores and-or consultas",
-	});
+router.get("/consultas-and-or", (req, res) => {
+    res.render("pages/consultas-and-or", {
+        title: "consultas and-or",
+    });
 });
 
-router.get("/like-consultas", (req, res) => {
-	res.render("pages/like-consultas", {
-		title: "like consultas",
-	});
+router.get("/consultas-like", (req, res) => {
+    res.render("pages/consultas-like", {
+        title: "consultas like",
+    });
 });
 
-router.get("/limit-consultas", (req, res) => {
-	res.render("pages/limit-consultas", {
-		title: "limit consultas",
-	});
+router.get("/consultas-limit", (req, res) => {
+    res.render("pages/consultas-limit", {
+        title: "consultas limit",
+    });
 });
 
-router.get("/max-min-consultas", (req, res) => {
-	res.render("pages/max-min-consultas", {
-		title: "max-min consultas",
-	});
+router.get("/consultas-max-min", (req, res) => {
+    res.render("pages/consultas-max-min", {
+        title: "consultas max-min",
+    });
+});
+
+/* 
+	______________________ inner join ______________________
+*/
+router.get("/inner-join-foreign-key", (req, res) => {
+    res.render("pages/inner-join-foreign-key", {
+        title: "inner join foreign key",
+    });
+});
+
+router.get("/inner-join-consultas", (req, res) => {
+    res.render("pages/inner-join-consultas", {
+        title: "inner join consultas ",
+    });
 });
 
 /* 
 	______________________ relaciones ______________________
 */
-router.get("/uno-uno-relaciones", (req, res) => {
-	res.render("pages/uno-uno-relaciones", {
-		title: "uno a uno relaciones",
-	});
+router.get("/relaciones-uno-uno", (req, res) => {
+    res.render("pages/relaciones-uno-uno", {
+        title: "relaciones uno a uno",
+    });
 });
 
-router.get("/uno-muchos-relaciones", (req, res) => {
-	res.render("pages/uno-muchos-relaciones", {
-		title: "uno a muchos relaciones",
-	});
+router.get("/relaciones-uno-muchos", (req, res) => {
+    res.render("pages/relaciones-uno-muchos", {
+        title: "relaciones uno a muchos",
+    });
 });
 
-router.get("/muchos-muchos-relaciones", (req, res) => {
-	res.render("pages/muchos-muchos-relaciones", {
-		title: "muchos a muchos relaciones",
-	});
-});
-
-router.get("/llave-foranea-relaciones", (req, res) => {
-	res.render("pages/llave-foranea-relaciones", {
-		title: "llave-foranea relaciones",
-	});
+router.get("/relaciones-muchos-muchos", (req, res) => {
+    res.render("pages/relaciones-muchos-muchos", {
+        title: "relaciones muchos a muchos",
+    });
 });
 
 /* 
 	______________________ normalizar ______________________
 */
-router.get("/normalizar-normalizacion", (req, res) => {
-	res.render("pages/normalizar-normalizacion", {
-		title: "normalizar datos",
-	});
+router.get("/normalizacion-importar", (req, res) => {
+    res.render("pages/normalizacion-importar", {
+        title: "importar datos",
+    });
 });
 
-router.get("/import-normalizacion", (req, res) => {
-	res.render("pages/import-normalizacion", {
-		title: "importar datos",
-	});
+router.get("/normalizacion-exportar", (req, res) => {
+    res.render("pages/normalizacion-exportar", {
+        title: "exportar datos",
+    });
 });
 
-router.get("/export-normalizacion", (req, res) => {
-	res.render("pages/export-normalizacion", {
-		title: "exportar datos",
-	});
+router.get("/normalizacion-normalizar", (req, res) => {
+    res.render("pages/normalizacion-normalizar", {
+        title: "normalizar datos",
+    });
 });
 
 /* 

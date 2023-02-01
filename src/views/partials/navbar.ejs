@@ -2,167 +2,171 @@
 	search_box: contenedor de 1 tag-input y 1 tag-a
 -->
 <div class="search_box">
-	<!--  
+    <!--  
 		tag-input: en esta definimos el buscador
 	-->
-	<input type="text" name="search" autocomplete="off" placeholder="Buscar" />
+    <input type="text" name="search" autocomplete="off" placeholder="Buscar" />
 
-	<!--  
+    <!--  
 		tag-a: contiene 1 tag-svg
 	-->
-	<a href="#" class="search_btn">
-		<!--  
+    <a href="#" class="search_btn">
+        <!--  
 			tag-svg: en esta definimos el icono del buscador
 		-->
-		<svg viewBox="0 0 24 24">
-			<path
-				d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"
-			></path>
-		</svg>
-	</a>
+        <svg viewBox="0 0 24 24">
+            <path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path>
+        </svg>
+    </a>
 </div>
 
 <!--  
 	nav_menu: en esta definimos los items del menu de navegacion
 -->
 <ul class="nav_menu">
-	<!--  
+    <!--  
 		li_dropdown: contenedor de 1 tag-a
 	-->
-	<li class="li_dropdown">
-		<!--  
+    <li class="li_dropdown">
+        <!--  
 			tag-a: en esta definimos el enlace del menu de
 			navegacion
 		-->
-		<a href="/acceso-mysql"> 01. Acceso a MySQL</a>
-	</li>
+        <a href="/inicio"> 01. Inicio</a>
+    </li>
 
-	<li class="li_dropdown">
-		<a href="/base-datos"> 02. Base de datos</a>
-	</li>
+    <li class="li_dropdown">
+        <a href="/base-datos"> 02. Base de datos</a>
+    </li>
 
-	<!--  
+    <!--  
 		li_dropdown: contenedor de 1 tag-a y 1 tag-ul, la clase
 		li_dropdown se implementa en javascript
 	-->
-	<li class="li_dropdown">
-		<a href="#" data-toggle="dropdown">
-			03. Tablas
+    <li class="li_dropdown">
+        <a href="#" data-toggle="dropdown">
+            03. Tablas
 
-			<!--          
+            <!--          
 				tag-svg: en este definimos el icono del del item
 			-->
-			<svg viewBox="0 0 24 24">
-				<path
-					d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"
-				></path>
-			</svg>
-		</a>
+            <svg viewBox="0 0 24 24">
+                <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
+            </svg>
+        </a>
 
-		<!--  
+        <!--  
 			:dropdown_menu: en esta definimos el menu de 
 			:navegacion interno
 		-->
-		<ul class="dropdown_menu">
-			<li><a href="/tipos-tablas">a. Tipos de datos</a></li>
+        <ul class="dropdown_menu">
+            <li><a href="/tablas-tipo-datos">a. Tipos de datos</a></li>
 
-			<li><a href="/modelacion-tablas">b. Modelacion</a></li>
+            <li><a href="/tablas-modelacion">b. Modelacion</a></li>
 
-			<li><a href="/manipulacion-tablas">c. Manipulacion</a></li>
-		</ul>
-	</li>
+            <li><a href="/tablas-manipulacion">c. Manipulacion</a></li>
+        </ul>
+    </li>
 
-	<li class="li_dropdown">
-		<a href="#" data-toggle="dropdown">
-			04. Crud
+    <li class="li_dropdown">
+        <a href="#" data-toggle="dropdown">
+            04. Sentencias
 
-			<svg viewBox="0 0 24 24">
-				<path
-					d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"
-				></path>
-			</svg>
-		</a>
+            <svg viewBox="0 0 24 24">
+                <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
+            </svg>
+        </a>
 
-		<ul class="dropdown_menu">
-			<li><a href="/insertar-crud">a. Insertar</a></li>
+        <ul class="dropdown_menu">
+            <li><a href="/sentencias-insert">a. Insert</a></li>
 
-			<li><a href="/seleccionar-crud">b. Seleccionar</a></li>
+            <li><a href="/sentencias-select">b. Select</a></li>
 
-			<li><a href="/actualizar-crud">c. Actualizar</a></li>
+            <li><a href="/sentencias-update">c. Update</a></li>
 
-			<li><a href="/eliminar-crud">d. Eliminar</a></li>
-		</ul>
-	</li>
+            <li><a href="/sentencias-delete">d. Delete</a></li>
+        </ul>
+    </li>
 
-	<li class="li_dropdown">
-		<a href="#" data-toggle="dropdown">
-			05. Consultas
+    <li class="li_dropdown">
+        <a href="#" data-toggle="dropdown">
+            05. Consultas
 
-			<svg viewBox="0 0 24 24">
-				<path
-					d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"
-				></path>
-			</svg>
-		</a>
+            <svg viewBox="0 0 24 24">
+                <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
+            </svg>
+        </a>
 
-		<ul class="dropdown_menu">
-			<li><a href="/asc-desc-consultas">a. Asc - Desc</a></li>
+        <ul class="dropdown_menu">
+            <li><a href="/consultas-asc-desc">a. Asc - Desc</a></li>
 
-			<li><a href="/comparadores-consultas">b. Comparadores</a></li>
+            <li><a href="/consultas-comparadores">b. Comparadores</a></li>
 
-			<li><a href="/and-or-consultas">c. And - Or</a></li>
+            <li><a href="/consultas-and-or">c. And - Or</a></li>
 
-			<li><a href="/like-consultas">d. Like</a></li>
+            <li><a href="/consultas-like">d. Like</a></li>
 
-			<li><a href="/limit-consultas">e. Limit</a></li>
+            <li><a href="/consultas-limit">e. Limit</a></li>
 
-			<li><a href="/max-min-consultas">f. Max - Min</a></li>
-		</ul>
-	</li>
+            <li><a href="/consultas-max-min">f. Max - Min</a></li>
 
-	<li class="li_dropdown">
-		<a href="#" data-toggle="dropdown">
-			06. Relaciones
+            <li><a href="/consultas-inner-join">f. Inner join</a></li>
+        </ul>
+    </li>
 
-			<svg viewBox="0 0 24 24">
-				<path
-					d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"
-				></path>
-			</svg>
-		</a>
+    <li class="li_dropdown">
+        <a href="#" data-toggle="dropdown">
+            06. Inner Join
 
-		<ul class="dropdown_menu">
-			<li><a href="/uno-uno-relaciones">a. 1 a uno</a></li>
+            <svg viewBox="0 0 24 24">
+                <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
+            </svg>
+        </a>
 
-			<li><a href="/uno-muchos-relaciones">b. 1 a muchos</a></li>
+        <ul class="dropdown_menu">
+            <li><a href="/inner-join-foreign-key">a. Foreign key</a></li>
 
-			<li><a href="/muchos-muchos-relaciones">c. N a muchos</a></li>
+            <li><a href="/inner-join-consultas">b. Consultas</a></li>
+        </ul>
+    </li>
 
-			<li><a href="/llave-foranea-relaciones">d. Foreign key</a></li>
-		</ul>
-	</li>
+    <li class="li_dropdown">
+        <a href="#" data-toggle="dropdown">
+            07. Relaciones
 
-	<li class="li_dropdown">
-		<a href="#" data-toggle="dropdown">
-			07. Normalizacion
+            <svg viewBox="0 0 24 24">
+                <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
+            </svg>
+        </a>
 
-			<svg viewBox="0 0 24 24">
-				<path
-					d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"
-				></path>
-			</svg>
-		</a>
+        <ul class="dropdown_menu">
+            <li><a href="/relaciones-uno-uno">a. 1 a uno</a></li>
 
-		<ul class="dropdown_menu">
-			<li><a href="/import-normalizacion">a. Importar</a></li>
+            <li><a href="/relaciones-uno-muchos">b. 1 a muchos</a></li>
 
-			<li><a href="/export-normalizacion">b. Exportar</a></li>
+            <li><a href="/relaciones-muchos-muchos">c. N a muchos</a></li>
+        </ul>
+    </li>
 
-			<li><a href="/normalizar-normalizacion">c. Normalizar</a></li>
-		</ul>
-	</li>
+    <li class="li_dropdown">
+        <a href="#" data-toggle="dropdown">
+            08. Normalizacion
 
-	<!-- <li class="li_dropdown">
+            <svg viewBox="0 0 24 24">
+                <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
+            </svg>
+        </a>
+
+        <ul class="dropdown_menu">
+            <li><a href="/normalizacion-importar">a. Importar</a></li>
+
+            <li><a href="/normalizacion-exportar">b. Exportar</a></li>
+
+            <li><a href="/normalizacion-normalizar">c. Normalizar</a></li>
+        </ul>
+    </li>
+
+    <!-- <li class="li_dropdown">
 		<a href="#"> 08. Roles</a>
 	</li> -->
 </ul>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <%- include('../partials/head'); %>
+    </head>
+
+    <body>
+        <!--  
+            .header_component: contenedor de la sesion, definimos un ID
+            .para implementar este elemento en './src/js/main.js'
+        -->
+        <header class="header_component" id="header-component">
+            <%- include('../partials/header'); %>
+        </header>
+
+        <!--  
+            components_container: contenedor de nav_component y de main_components
+        -->
+        <div class="components_container">
+            <!--  
+                .nav_component: contenedor de la sesion, definimos un ID 
+                .para implementar este elemento en './src/js/main.js'
+            -->
+            <nav class="nav_component" id="menu-nav"><%- include('../partials/navbar'); %></nav>
+
+            <!--  
+                main_components: contenedor de section_banner,
+                section_container y 1 tag-footer
+            -->
+            <main class="main_components">
+                <!--  
+                    section_banner: contenedor de 1 tag-h2, de banner_line_titles
+                    y 1 tag-p
+                -->
+                <section class="section_banner">
+                    <!--  
+                        tag-h2: en esta definimos el titulo del banner
+                    -->
+                    <h2>Consultas</h2>
+
+                    <!--  
+                        banner_line_titles: esta tag la definimos para crear la
+                        linea del titulo
+                    -->
+                    <div class="banner_line_titles"></div>
+
+                    <!--  
+                        tag-p: en esta definimos el parrafo de la seccion
+                    -->
+                    <p>
+                        las consultas <strong>join</strong> nos permiten seleccionar registros de
+                        entidades externas siempre y cuando estas tengan algun tipo de relacion con
+                        una entidad raiz por lo que debe existir como minimo una
+                        <strong>llave foranea</strong> en la entidad raiz para que estas consultas
+                        se puedan realizar.
+                    </p>
+                </section>
+
+                <!--  
+                    sections_container: contenedor de las secciones que componen
+                    esta vista
+                -->
+                <div class="sections_container">
+                    <!--  
+						sect_content: contenedor de 1 tag-h3 y de sect_box_img
+					-->
+                    <section class="sect_content">
+                        <!--  
+							tag-h3: en esta definimos el titulo de la seccion
+						-->
+                        <h3>01. Seleccionando todos los registros de una entidad externa</h3>
+
+                        <!--  
+                            code_box: en esta definimos la guia de codigo en ejecucion
+                        -->
+                        <p class="code_box">
+                            <span>></span> select * <strong>from</strong> compras c
+                            <strong>inner join</strong> clientes b
+                            <strong>where</strong> c.cli_cedula = b.cli_cedula;
+                        </p>
+
+                        <!--  
+							sect_box_img: contenedor de 1 tag-img
+						-->
+                        <div class="sect_box_img">
+                            <img
+                                src="../../assets/images/inner-join/consultas/i02.png"
+                                alt="seleccionando todos los registros de una entidad externa"
+                            />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>
+                            02. Seleccionando un registro de una entidad externa a travez de su ID
+                        </h3>
+
+                        <p class="code_box">
+                            <span>></span> select * <strong>from</strong> compras c
+                            <strong>inner join</strong> clientes b
+                            <strong>where</strong> c.cli_cedula = b.cli_cedula
+                            <strong>and</strong> b.cli_cedula = 1;
+                        </p>
+
+                        <div class="sect_box_img">
+                            <img
+                                src="../../assets/images/inner-join/consultas/i03.png"
+                                alt="seleccionando un registro de una entidad externa a travez de su ID"
+                            />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>
+                            03. Seleccionando todos los registros de una entidad externa por campos
+                        </h3>
+
+                        <p class="code_box">
+                            <span>></span> select b.cli_nombre <strong>from</strong> compras c
+                            <strong>inner join</strong> clientes b
+                            <strong>where</strong> c.cli_cedula = b.cli_cedula;
+                        </p>
+
+                        <div class="sect_box_img">
+                            <img
+                                src="../../assets/images/inner-join/consultas/i04.png"
+                                alt="seleccionando todos los registros de una entidad externa por campos"
+                            />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>04. Seleccionando todos los registros de dos entidades externas</h3>
+
+                        <p class="code_box">
+                            <span>></span> select * <strong>from</strong> compras c
+                            <strong>inner join</strong> clientes b <strong>on</strong> c.cli_cedula
+                            = b.cli_cedula <strong>inner join</strong> productos p
+                            <strong>on</strong> c.pro_codigo = p.pro_codigo;
+                        </p>
+
+                        <div class="sect_box_img">
+                            <img
+                                src="../../assets/images/inner-join/consultas/i05.png"
+                                alt="seleccionando todos los registros de dos entidades externas"
+                            />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>
+                            05. Seleccionando todos los registros de dos entidades externas por
+                            campos
+                        </h3>
+
+                        <p class="code_box">
+                            <span>></span> select b.cli_nombre, p.pro_nombre
+                            <strong>from</strong> compras c <strong>inner join</strong> clientes b
+                            <strong>on</strong> c.cli_cedula = b.cli_cedula
+                            <strong>inner join</strong> productos p <strong>on</strong> c.pro_codigo
+                            = p.pro_codigo;
+                        </p>
+
+                        <div class="sect_box_img">
+                            <img
+                                src="../../assets/images/inner-join/consultas/i06.png"
+                                alt="seleccionando todos los registros de dos entidades externas por campos"
+                            />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>
+                            06. Seleccionando un registro de dos entidades externas por medio de sus
+                            ID
+                        </h3>
+
+                        <p class="code_box">
+                            <span>></span> select * <strong>from</strong> compras c
+                            <strong>inner join</strong> clientes b <strong>on</strong> c.cli_cedula
+                            = b.cli_cedula <strong>and</strong> b.cli_cedula = 2
+                            <strong>inner join</strong> productos p <strong>on</strong> c.pro_codigo
+                            = p.pro_codigo <strong>and</strong> p.pro_codigo = 1120;
+                        </p>
+
+                        <div class="sect_box_img">
+                            <img
+                                src="../../assets/images/inner-join/consultas/i07.png"
+                                alt="seleccionando un registro de dos entidades externas por medio de sus ID"
+                            />
+                        </div>
+                    </section>
+
+                    <!--  
+                        section_footer
+                    -->
+                    <footer class="section_footer">Consultas - Inner join</footer>
+                </div>
+            </main>
+        </div>
+
+        <script src="./js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <%- include('../partials/head'); %>
+    </head>
+
+    <body>
+        <!--  
+            .header_component: contenedor de la sesion, definimos un ID
+            .para implementar este elemento en './src/js/main.js'
+        -->
+        <header class="header_component" id="header-component"><%- include('../partials/header'); %></header>
+
+        <!--  
+            components_container: contenedor de nav_component y de main_components
+        -->
+        <div class="components_container">
+            <!--  
+                .nav_component: contenedor de la sesion, definimos un ID 
+                .para implementar este elemento en './src/js/main.js'
+            -->
+            <nav class="nav_component" id="menu-nav"><%- include('../partials/navbar'); %></nav>
+
+            <!--  
+                main_components: contenedor de section_banner,
+                section_container y 1 tag-footer
+            -->
+            <main class="main_components">
+                <!--  
+                    section_banner: contenedor de 1 tag-h2, de banner_line_titles
+                    y 1 tag-p
+                -->
+                <section class="section_banner">
+                    <!--  
+                        tag-h2: en esta definimos el titulo del banner
+                    -->
+                    <h2>Exportar</h2>
+
+                    <!--  
+                        banner_line_titles: esta tag la definimos para crear la
+                        linea del titulo
+                    -->
+                    <div class="banner_line_titles"></div>
+
+                    <!--  
+                        tag-p: en esta definimos el parrafo de la seccion
+                    -->
+                    <p>Para realizar una <strong>exportacion</strong> de datos de la base de datos, debemos tener presente lo siguiente. primero debemos ingresar al administrador de <strong>mysql</strong> A continuacion debemos seleccionar la tabla de la cual deseamos exportar los datos, luego definir el formato para el archivo y finalmente, hacer clic en el boton continuar.</p>
+                </section>
+
+                <!--  
+                    sections_container: contenedor de las secciones que componen
+                    esta vista
+                -->
+                <div class="sections_container">
+                    <!--  
+						sect_content: contenedor de 1 tag-h3 y de sect_box_img
+					-->
+                    <section class="sect_content">
+                        <!--  
+							tag-h3: en esta definimos el titulo de la seccion
+						-->
+                        <h3>01. Accediendo a mysql admin</h3>
+
+                        <!--  
+							sect_box_img: contenedor de 1 tag-img
+						-->
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/normalizacion/exportar/exp1.png" alt="accediendo a mysql admin" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>02. Seleccionando la tabla</h3>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/normalizacion/exportar/exp2.png" alt="seleccionando la tabla" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>03. Definiendo el formato para el archivo</h3>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/normalizacion/exportar/exp3.png" alt="definiendo el formato para el archivo" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>04. Realizando la exportacion</h3>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/normalizacion/exportar/exp4.png" alt="realizando la exportacion" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>05. Validando la exportacion</h3>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/normalizacion/exportar/exp5.png" alt="validando la exportacion" />
+                        </div>
+                    </section>
+
+                    <!--  
+                        section_footer
+                    -->
+                    <footer class="section_footer">Exportar - Normalizacion</footer>
+                </div>
+            </main>
+        </div>
+
+        <script src="./js/main.js"></script>
+    </body>
+</html>
