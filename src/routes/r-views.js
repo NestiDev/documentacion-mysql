@@ -89,9 +89,9 @@ router.get("/sentencias-delete", (req, res) => {
 /* 
 	______________________ consultas ______________________
 */
-router.get("/consultas-asc-desc", (req, res) => {
-    res.render("pages/consultas-asc-desc", {
-        title: "consultas asc-desc",
+router.get("/consultas-order-by", (req, res) => {
+    res.render("pages/consultas-order-by", {
+        title: "consultas order-by",
     });
 });
 
@@ -122,6 +122,12 @@ router.get("/consultas-limit", (req, res) => {
 router.get("/consultas-max-min", (req, res) => {
     res.render("pages/consultas-max-min", {
         title: "consultas max-min",
+    });
+});
+
+router.get("/consultas-count-sum", (req, res) => {
+    res.render("pages/consultas-count-sum", {
+        title: "consultas count-sum",
     });
 });
 
