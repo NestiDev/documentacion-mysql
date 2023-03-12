@@ -46,7 +46,10 @@
                     <!--  
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
-                    <p>Para realizar una <strong>importacion</strong> de datos en la base de datos, debemos tener presente lo siguiente. Los datos no pueden contener cabeceras, definir el tipo de datos CSV en la exportacion y finalmente, tanto los campos como los tipos de datos que se van a importar deben coincidir con el modelado de la tabla.</p>
+                    <p>
+                        Para importar una base de datos haciendo uso de la consola <strong>CMD</strong> debemos contar con un archivo de datos el cual vamos a guardar dentro de la carpeta bin, paso
+                        seguido sera crear y seleccionar la base de datos para posteriormente cargar los datos en esta. Finalmente, podemos eliminar el archivo de la carpeta bin.
+                    </p>
                 </section>
 
                 <!--  
@@ -61,49 +64,65 @@
                         <!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
-                        <h3>01. Datos sin cabeceras</h3>
+                        <h3>01. Guardando la base de datos dentro de la carpeta bin</h3>
 
                         <!--  
 							sect_box_img: contenedor de 1 tag-img
 						-->
                         <div class="sect_box_img">
-                            <img src="../../assets/images/normalizacion/importar/imp1.png" alt="datos sin cabeceras" />
+                            <img src="../../assets/images/basedatos/importar/i01.png" alt="guardando la base de datos dentro de la carpeta bin" />
                         </div>
                     </section>
 
                     <section class="sect_content">
-                        <h3>02. Exportando los datos</h3>
+                        <h3>02. Creando y seleccionando la base de datos</h3>
 
                         <div class="sect_box_img">
-                            <img src="../../assets/images/normalizacion/importar/imp2.png" alt="exportando los datos" />
+                            <img src="../../assets/images/basedatos/importar/i02.png" alt="creando y seleccionando la base de datos" />
                         </div>
                     </section>
 
                     <section class="sect_content">
-                        <h3>03. Validando los datos exportados</h3>
-
-                        <div class="sect_box_img">
-                            <img src="../../assets/images/normalizacion/importar/imp3.png" alt="validando los datos exportados" />
-                        </div>
-                    </section>
-
-                    <section class="sect_content">
-                        <h3>04. Importacion en la base de datos</h3>
+                        <h3>03. Cargando la base de datos</h3>
 
                         <!--  
                             code_box: en esta definimos la guia de codigo en ejecucion
                         -->
-                        <p class="code_box"><span>></span> load data local infile '<strong>ruta_archivo</strong>' into <strong>table</strong> nombre_tabla fields terminated by ';';</p>
+                        <p class="code_box"><span>></span> source <strong>nombre_db</strong>.extension</p>
 
                         <div class="sect_box_img">
-                            <img src="../../assets/images/normalizacion/importar/imp4.png" alt="importacion en la base de datos" />
+                            <img src="../../assets/images/basedatos/importar/i03.png" alt="cargando la base de datos" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>04. Base de datos cargada correctamente</h3>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/basedatos/importar/i04.png" alt="base de datos cargada correctamente" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>05. Nuevo destino de la base de datos - carpeta data</h3>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/basedatos/importar/i05.png" alt="nuevo destino de la base de datos - carpeta data" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>06. Eliminando la base de datos de la carpeta bin</h3>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/basedatos/importar/i06.png" alt="eliminando la base de datos de la carpeta bin" />
                         </div>
                     </section>
 
                     <!--  
                         section_footer
                     -->
-                    <footer class="section_footer">Importar - Normalizacion</footer>
+                    <footer class="section_footer">Importar - Base de datos</footer>
                 </div>
             </main>
         </div>

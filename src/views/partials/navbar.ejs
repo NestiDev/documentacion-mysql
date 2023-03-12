@@ -37,25 +37,23 @@
         <a href="/inicio"> 01. Inicio</a>
     </li>
 
-    <li class="li_dropdown">
-        <a href="/base-datos"> 02. Base de datos</a>
-    </li>
-
     <!--  
 		li_dropdown: contenedor de 1 tag-a y 1 tag-ul, la clase
 		li_dropdown se implementa en javascript
 	-->
     <li class="li_dropdown">
+        <!--  
+			tag-a: en esta definimos el enlace del menu de
+			navegacion
+		-->
         <a href="#" data-toggle="dropdown">
-            03. Tablas
+            02. Base de datos
 
             <!--          
-				tag-svg: en este definimos el icono del del item
-			-->
+                tag-svg: en este definimos el icono del del item
+            -->
             <svg viewBox="0 0 24 24">
-                <path
-                    d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"
-                ></path>
+                <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
             </svg>
         </a>
 
@@ -63,6 +61,26 @@
 			:dropdown_menu: en esta definimos el menu de 
 			:navegacion interno
 		-->
+        <ul class="dropdown_menu">
+            <li><a href="/base-datos-manipulacion">a. Manipulacion</a></li>
+
+            <li><a href="/base-datos-exportar">b. Exportar</a></li>
+
+            <li><a href="/base-datos-importar">c. Importar</a></li>
+
+            <li><a href="/base-datos-cargar-datos">d. Cargar datos</a></li>
+        </ul>
+    </li>
+
+    <li class="li_dropdown">
+        <a href="#" data-toggle="dropdown">
+            03. Tablas
+
+            <svg viewBox="0 0 24 24">
+                <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
+            </svg>
+        </a>
+
         <ul class="dropdown_menu">
             <li><a href="/tablas-tipo-datos">a. Tipos de datos</a></li>
 
@@ -77,9 +95,7 @@
             04. Sentencias
 
             <svg viewBox="0 0 24 24">
-                <path
-                    d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"
-                ></path>
+                <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
             </svg>
         </a>
 
@@ -99,26 +115,30 @@
             05. Consultas
 
             <svg viewBox="0 0 24 24">
-                <path
-                    d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"
-                ></path>
+                <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
             </svg>
         </a>
 
         <ul class="dropdown_menu">
             <li><a href="/consultas-order-by">a. Order by</a></li>
 
-            <li><a href="/consultas-comparadores">b. Comparadores</a></li>
+            <li><a href="/consultas-group-by">b. Group by</a></li>
 
-            <li><a href="/consultas-and-or">c. And - Or</a></li>
+            <li><a href="/consultas-operadores">c. Operadores</a></li>
 
-            <li><a href="/consultas-like">d. Like - not Like</a></li>
+            <li><a href="/consultas-and-or">d. And - Or</a></li>
 
-            <li><a href="/consultas-limit">e. Limit</a></li>
+            <li><a href="/consultas-between">e. Between</a></li>
 
-            <li><a href="/consultas-max-min">f. Max - Min</a></li>
+            <li><a href="/consultas-in">f. In - not In</a></li>
 
-            <li><a href="/consultas-count-sum">g. Count - Sum</a></li>
+            <li><a href="/consultas-like">g. Like - not Like</a></li>
+
+            <li><a href="/consultas-limit">h. Limit</a></li>
+
+            <li><a href="/consultas-max-min">i. Max - Min</a></li>
+
+            <li><a href="/consultas-count-sum">j. Count - Sum</a></li>
         </ul>
     </li>
 
@@ -127,9 +147,7 @@
             06. Inner Join
 
             <svg viewBox="0 0 24 24">
-                <path
-                    d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"
-                ></path>
+                <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
             </svg>
         </a>
 
@@ -145,9 +163,7 @@
             07. Relaciones
 
             <svg viewBox="0 0 24 24">
-                <path
-                    d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"
-                ></path>
+                <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
             </svg>
         </a>
 
@@ -160,23 +176,21 @@
         </ul>
     </li>
 
+    <li class="li_dropdown"><a href="/normalizacion">08. Normalizacion</a></li>
+
     <li class="li_dropdown">
         <a href="#" data-toggle="dropdown">
-            08. Normalizacion
+            09. PHP MyAdmin
 
             <svg viewBox="0 0 24 24">
-                <path
-                    d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"
-                ></path>
+                <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
             </svg>
         </a>
 
         <ul class="dropdown_menu">
-            <li><a href="/normalizacion-importar">a. Importar</a></li>
+            <li><a href="/phpmyadmin-exportar">a. Exportar</a></li>
 
-            <li><a href="/normalizacion-exportar">b. Exportar</a></li>
-
-            <li><a href="/normalizacion-normalizar">c. Normalizar</a></li>
+            <li><a href="/phpmyadmin-importar">b. Importar</a></li>
         </ul>
     </li>
 

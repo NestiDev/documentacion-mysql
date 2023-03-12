@@ -35,7 +35,7 @@
                     <!--  
                         tag-h2: en esta definimos el titulo del banner
                     -->
-                    <h2>Order by</h2>
+                    <h2>Cargar datos</h2>
 
                     <!--  
                         banner_line_titles: esta tag la definimos para crear la
@@ -47,8 +47,8 @@
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
                     <p>
-                        Nos permiten ordenar de manera ascendente o descendente los valores de nuestra tabla, y se puede aplicar a cualquier campo sin importar que sea de tipo numerico o cadena de
-                        texto.
+                        <strong>Mysql</strong> permite cargar datos externos en nuestras tablas, pero para ello debemos tener presente lo siguiente. Estos datos no pueden contener cabeceras, el tipo
+                        de dato debe ser .CSV y por ultimo, la cantidad de campos con y su tipo de dato deben coincidir con el modelado de la tabla.
                     </p>
                 </section>
 
@@ -64,43 +64,49 @@
                         <!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
-                        <h3>01. Orden ascendente de valores</h3>
-
-                        <!--  
-                            code_box: en esta definimos la guia de codigo en ejecucion
-                        -->
-                        <p class="code_box">
-                            <span>></span> select * from nombre_tabla
-                            <strong>order by</strong>
-                            campo asc;
-                        </p>
+                        <h3>01. Datos sin cabeceras</h3>
 
                         <!--  
 							sect_box_img: contenedor de 1 tag-img
 						-->
                         <div class="sect_box_img">
-                            <img src="../../assets/images/consultas/order-by/con2.png" alt="orden ascendente de valores" />
+                            <img src="../../assets/images/basedatos/cargar-datos/imp1.png" alt="datos sin cabeceras" />
                         </div>
                     </section>
 
                     <section class="sect_content">
-                        <h3>02. Orden descendente de valores</h3>
-
-                        <p class="code_box">
-                            <span>></span> select * from nombre_tabla
-                            <strong>order by</strong>
-                            campo desc;
-                        </p>
+                        <h3>02. Exportando los datos</h3>
 
                         <div class="sect_box_img">
-                            <img src="../../assets/images/consultas/order-by/con2.1.png" alt="orden descendente de valores" />
+                            <img src="../../assets/images/basedatos/cargar-datos/imp2.png" alt="exportando los datos" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>03. Validando los datos exportados</h3>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/basedatos/cargar-datos/imp3.png" alt="validando los datos exportados" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>04. Cargando los datos en la tabla</h3>
+
+                        <!--  
+                            code_box: en esta definimos la guia de codigo en ejecucion
+                        -->
+                        <p class="code_box"><span>></span> load data local infile '<strong>ruta_archivo</strong>' into <strong>table</strong> nombre_tabla fields terminated by ';';</p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/basedatos/cargar-datos/imp4.png" alt="cargando los datos en la tabla" />
                         </div>
                     </section>
 
                     <!--  
                         section_footer
                     -->
-                    <footer class="section_footer">Order by - Consultas</footer>
+                    <footer class="section_footer">Cargar datos - Base de datos</footer>
                 </div>
             </main>
         </div>

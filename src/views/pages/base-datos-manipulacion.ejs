@@ -35,7 +35,7 @@
                     <!--  
                         tag-h2: en esta definimos el titulo del banner
                     -->
-                    <h2>Order by</h2>
+                    <h2>Manipulacion</h2>
 
                     <!--  
                         banner_line_titles: esta tag la definimos para crear la
@@ -47,8 +47,8 @@
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
                     <p>
-                        Nos permiten ordenar de manera ascendente o descendente los valores de nuestra tabla, y se puede aplicar a cualquier campo sin importar que sea de tipo numerico o cadena de
-                        texto.
+                        Por medio de la consola de comandos podemos crear, mostrar, seleccionar y eliminar una base de datos de una manera rapida y sencilla. Para ello, haremos uso de los comandos
+                        <strong>create, use, show</strong> y <strong>drop</strong>
                     </p>
                 </section>
 
@@ -64,43 +64,55 @@
                         <!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
-                        <h3>01. Orden ascendente de valores</h3>
+                        <h3>01. Creando una base de datos</h3>
 
                         <!--  
                             code_box: en esta definimos la guia de codigo en ejecucion
                         -->
-                        <p class="code_box">
-                            <span>></span> select * from nombre_tabla
-                            <strong>order by</strong>
-                            campo asc;
-                        </p>
+                        <p class="code_box"><span>></span> create <strong>database</strong> nombre_db;</p>
 
                         <!--  
 							sect_box_img: contenedor de 1 tag-img
 						-->
                         <div class="sect_box_img">
-                            <img src="../../assets/images/consultas/order-by/con2.png" alt="orden ascendente de valores" />
+                            <img src="../../assets/images/basedatos/manipulacion/bas2.png" alt="creando una base de datos" />
                         </div>
                     </section>
 
                     <section class="sect_content">
-                        <h3>02. Orden descendente de valores</h3>
+                        <h3>02. Mostrando bases de datos creadas</h3>
 
-                        <p class="code_box">
-                            <span>></span> select * from nombre_tabla
-                            <strong>order by</strong>
-                            campo desc;
-                        </p>
+                        <p class="code_box"><span>></span> show <strong>databases</strong>;</p>
 
                         <div class="sect_box_img">
-                            <img src="../../assets/images/consultas/order-by/con2.1.png" alt="orden descendente de valores" />
+                            <img src="../../assets/images/basedatos/manipulacion/bas1.png" alt="mostrando bases de datos creadas" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>03. Seleccionando una base de datos</h3>
+
+                        <p class="code_box"><span>></span> use nombre_db;</p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/basedatos/manipulacion/bas3.png" alt="seleccionando una base de datos" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>04. Eliminando una base de datos</h3>
+
+                        <p class="code_box"><span>></span> drop <strong>database</strong> nombre_db;</p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/basedatos/manipulacion/base4.png" alt="eliminando una base de datos" />
                         </div>
                     </section>
 
                     <!--  
                         section_footer
                     -->
-                    <footer class="section_footer">Order by - Consultas</footer>
+                    <footer class="section_footer">Manipulacion - Base de Datos</footer>
                 </div>
             </main>
         </div>

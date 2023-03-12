@@ -32,9 +32,27 @@ router.get("/inicio", (req, res) => {
 /* 
 	______________________ base de datos ______________________
 */
-router.get("/base-datos", (req, res) => {
-    res.render("pages/base-datos", {
-        title: "base de datos",
+router.get("/base-datos-manipulacion", (req, res) => {
+    res.render("pages/base-datos-manipulacion", {
+        title: "base de datos manipulacion",
+    });
+});
+
+router.get("/base-datos-exportar", (req, res) => {
+    res.render("pages/base-datos-exportar", {
+        title: "base de datos exportar",
+    });
+});
+
+router.get("/base-datos-importar", (req, res) => {
+    res.render("pages/base-datos-importar", {
+        title: "base de datos importar",
+    });
+});
+
+router.get("/base-datos-cargar-datos", (req, res) => {
+    res.render("pages/base-datos-cargar-datos", {
+        title: "base de datos cargar datos",
     });
 });
 
@@ -95,15 +113,33 @@ router.get("/consultas-order-by", (req, res) => {
     });
 });
 
-router.get("/consultas-comparadores", (req, res) => {
-    res.render("pages/consultas-comparadores", {
-        title: "consultas comparadores",
+router.get("/consultas-group-by", (req, res) => {
+    res.render("pages/consultas-group-by", {
+        title: "consultas group-by",
+    });
+});
+
+router.get("/consultas-operadores", (req, res) => {
+    res.render("pages/consultas-operadores", {
+        title: "consultas operadores",
     });
 });
 
 router.get("/consultas-and-or", (req, res) => {
     res.render("pages/consultas-and-or", {
         title: "consultas and-or",
+    });
+});
+
+router.get("/consultas-between", (req, res) => {
+    res.render("pages/consultas-between", {
+        title: "consultas between",
+    });
+});
+
+router.get("/consultas-in", (req, res) => {
+    res.render("pages/consultas-in", {
+        title: "consultas in",
     });
 });
 
@@ -168,29 +204,28 @@ router.get("/relaciones-muchos-muchos", (req, res) => {
 });
 
 /* 
-	______________________ normalizar ______________________
+	______________________ normalizacion ______________________
 */
-router.get("/normalizacion-importar", (req, res) => {
-    res.render("pages/normalizacion-importar", {
-        title: "importar datos",
-    });
-});
-
-router.get("/normalizacion-exportar", (req, res) => {
-    res.render("pages/normalizacion-exportar", {
-        title: "exportar datos",
-    });
-});
-
-router.get("/normalizacion-normalizar", (req, res) => {
-    res.render("pages/normalizacion-normalizar", {
-        title: "normalizar datos",
+router.get("/normalizacion", (req, res) => {
+    res.render("pages/normalizacion", {
+        title: "normalizacion",
     });
 });
 
 /* 
-	______________________ roles ______________________
+	______________________ PHP MyAdmin ______________________
 */
+router.get("/phpmyadmin-exportar", (req, res) => {
+    res.render("pages/phpmyadmin-exportar", {
+        title: "phpMyAdmin exportar datos",
+    });
+});
+
+router.get("/phpmyadmin-importar", (req, res) => {
+    res.render("pages/phpmyadmin-importar", {
+        title: "phpMyAdmin importar datos",
+    });
+});
 
 /* 
 	finalmente realizamos una exportacion del modulo

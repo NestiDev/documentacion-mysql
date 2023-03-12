@@ -35,7 +35,7 @@
                     <!--  
                         tag-h2: en esta definimos el titulo del banner
                     -->
-                    <h2>Order by</h2>
+                    <h2>Operadores</h2>
 
                     <!--  
                         banner_line_titles: esta tag la definimos para crear la
@@ -47,8 +47,8 @@
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
                     <p>
-                        Nos permiten ordenar de manera ascendente o descendente los valores de nuestra tabla, y se puede aplicar a cualquier campo sin importar que sea de tipo numerico o cadena de
-                        texto.
+                        Nos permiten trabajar con todos los tipos de datos por medio de condiciones donde hacemos uso de los operadores igual a o diferente a, mayor que o mayor igual, menor que o
+                        menor igual. Pero debemos tener presente que para llevar a cabo este tipo de consultas es obligatorio definir primero la condicion <strong>where</strong>
                     </p>
                 </section>
 
@@ -64,43 +64,45 @@
                         <!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
-                        <h3>01. Orden ascendente de valores</h3>
+                        <h3>01. Valores diferentes a</h3>
 
                         <!--  
                             code_box: en esta definimos la guia de codigo en ejecucion
                         -->
-                        <p class="code_box">
-                            <span>></span> select * from nombre_tabla
-                            <strong>order by</strong>
-                            campo asc;
-                        </p>
+                        <p class="code_box"><span>></span> select * from nombre_tabla <strong>where</strong> campo != "valor";</p>
 
                         <!--  
 							sect_box_img: contenedor de 1 tag-img
 						-->
                         <div class="sect_box_img">
-                            <img src="../../assets/images/consultas/order-by/con2.png" alt="orden ascendente de valores" />
+                            <img src="../../assets/images/consultas/operadores/con7.png" alt="valores diferentes a" />
                         </div>
                     </section>
 
                     <section class="sect_content">
-                        <h3>02. Orden descendente de valores</h3>
+                        <h3>02. Valores mayores o iguales a</h3>
 
-                        <p class="code_box">
-                            <span>></span> select * from nombre_tabla
-                            <strong>order by</strong>
-                            campo desc;
-                        </p>
+                        <p class="code_box"><span>></span> select * from nombre_tabla <strong>where</strong> campo >= valor;</p>
 
                         <div class="sect_box_img">
-                            <img src="../../assets/images/consultas/order-by/con2.1.png" alt="orden descendente de valores" />
+                            <img src="../../assets/images/consultas/operadores/con3.png" alt="valores mayores o iguales a" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>03. Valores menores o iguales a</h3>
+
+                        <p class="code_box"><span>></span> select * from nombre_tabla <strong>where</strong> campo <= valor;</p>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/consultas/operadores/con3.1.png" alt="valores menores o iguales a" />
                         </div>
                     </section>
 
                     <!--  
                         section_footer
                     -->
-                    <footer class="section_footer">Order by - Consultas</footer>
+                    <footer class="section_footer">Operadores - Consultas</footer>
                 </div>
             </main>
         </div>

@@ -35,7 +35,7 @@
                     <!--  
                         tag-h2: en esta definimos el titulo del banner
                     -->
-                    <h2>Order by</h2>
+                    <h2>Exportar</h2>
 
                     <!--  
                         banner_line_titles: esta tag la definimos para crear la
@@ -47,8 +47,8 @@
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
                     <p>
-                        Nos permiten ordenar de manera ascendente o descendente los valores de nuestra tabla, y se puede aplicar a cualquier campo sin importar que sea de tipo numerico o cadena de
-                        texto.
+                        Para exportar una base de datos desde <strong>PHP MyAdmin</strong> debemos tener presente lo siguiente. primero debemos ingresar al administrador de <strong>mysql</strong> A
+                        continuacion debemos seleccionar la tabla de la cual deseamos exportar los datos, luego definir el formato para el archivo y finalmente, hacer clic en el boton continuar.
                     </p>
                 </section>
 
@@ -64,43 +64,52 @@
                         <!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
-                        <h3>01. Orden ascendente de valores</h3>
-
-                        <!--  
-                            code_box: en esta definimos la guia de codigo en ejecucion
-                        -->
-                        <p class="code_box">
-                            <span>></span> select * from nombre_tabla
-                            <strong>order by</strong>
-                            campo asc;
-                        </p>
+                        <h3>01. Accediendo a phpMyAdmin</h3>
 
                         <!--  
 							sect_box_img: contenedor de 1 tag-img
 						-->
                         <div class="sect_box_img">
-                            <img src="../../assets/images/consultas/order-by/con2.png" alt="orden ascendente de valores" />
+                            <img src="../../assets/images/phpmyadmin/exportar/exp1.png" alt="accediendo a phpMyAdmin" />
                         </div>
                     </section>
 
                     <section class="sect_content">
-                        <h3>02. Orden descendente de valores</h3>
-
-                        <p class="code_box">
-                            <span>></span> select * from nombre_tabla
-                            <strong>order by</strong>
-                            campo desc;
-                        </p>
+                        <h3>02. Seleccionando la tabla de una base de datos</h3>
 
                         <div class="sect_box_img">
-                            <img src="../../assets/images/consultas/order-by/con2.1.png" alt="orden descendente de valores" />
+                            <img src="../../assets/images/phpmyadmin/exportar/exp2.png" alt="seleccionando la tabla de una base de datos" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>03. Definiendo el formato para el archivo</h3>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/phpmyadmin/exportar/exp3.png" alt="definiendo el formato para el archivo" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>04. Realizando la exportacion</h3>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/phpmyadmin/exportar/exp4.png" alt="realizando la exportacion" />
+                        </div>
+                    </section>
+
+                    <section class="sect_content">
+                        <h3>05. Validando la exportacion</h3>
+
+                        <div class="sect_box_img">
+                            <img src="../../assets/images/phpmyadmin/exportar/exp5.png" alt="validando la exportacion" />
                         </div>
                     </section>
 
                     <!--  
                         section_footer
                     -->
-                    <footer class="section_footer">Order by - Consultas</footer>
+                    <footer class="section_footer">Exportar - PHP MyAdmin</footer>
                 </div>
             </main>
         </div>
